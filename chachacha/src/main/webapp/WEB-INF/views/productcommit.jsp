@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
+
+
 판매자 상품등록 페이지입니다
 
 </body>
