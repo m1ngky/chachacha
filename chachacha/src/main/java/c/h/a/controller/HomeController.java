@@ -18,4 +18,11 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping(value="/productcommit.cha")
+	public String productcommit() {
+		System.out.println("판매자 상품등록 페이지");
+		return "productcommit";
+		
+	}
+	
 }

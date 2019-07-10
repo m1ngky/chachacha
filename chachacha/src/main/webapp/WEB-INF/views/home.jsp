@@ -84,7 +84,7 @@
 
 	<!-- Homepage Slider -->
 	<div id="home-slider">
-		<div class="overlay"></div>
+		<div class="overlay"><img src="img/chungha.jpg"></div>
 
 		<div class="slider-text">
 			<div id="slidecaption"></div>
@@ -115,7 +115,7 @@
 			<nav id="menu">
 				<ul id="menu-nav">
 					<li class="current"><a href="#home-slider">Home</a></li>
-					<li><a href="#work">Our Work</a></li>
+					<li><a href="productcommit.cha">상품등록</a></li>
 					<li><a href="#about">About Us</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<li><a href="shortcodes.html" class="external">Shortcodes</a></li>
