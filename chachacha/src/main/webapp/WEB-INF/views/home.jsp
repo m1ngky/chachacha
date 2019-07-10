@@ -40,7 +40,7 @@
 
 	<!-- Homepage Slider -->
 	<div id="home-slider">
-		<div class="overlay"><img src="img/chungha.jpg"></div>
+		<div class="overlay"></div>
 
 		<div class="slider-text">
 			<div id="slidecaption"></div>
