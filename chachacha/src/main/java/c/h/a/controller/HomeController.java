@@ -25,4 +25,10 @@ public class HomeController {
 		
 	}
 	
+	@RequestMapping(value="/board_list")
+	public String board_list() {
+		System.out.println("게시판리스트");
+		return "board_list";
+	}
+	
 }
