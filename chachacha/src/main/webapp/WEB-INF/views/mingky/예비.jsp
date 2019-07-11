@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
  <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>íŒë§¤ì ìƒí’ˆë“±ë¡ í˜ì´ì§€ì…ë‹ˆë‹¤</title>
+<title>ÆÇ¸ÅÀÚ »óÇ°µî·Ï ÆäÀÌÁöÀÔ´Ï´Ù</title>
 <link href="css/mingky.css" rel="stylesheet">
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -20,13 +20,12 @@ color:black;
  
 </head>
 <body>
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="../header.jsp"></jsp:include>
 
 	<div class="container">
 		<div class="card">
 			<div class="container-fliud">
 				<div class="wrapper row">
-<!-- 					ì™¼ìª½ë¶€ë¶„ ì‚¬ì§„ë„£ëŠ”ê³³ -->
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
@@ -46,9 +45,7 @@ color:black;
 						
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">
-						<input type="text" id = "title">
-						</h3>
+						<h3 class="product-title">men's shoes fashion</h3>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -57,7 +54,7 @@ color:black;
 								<span class="fa fa-star"></span>
 								<span class="fa fa-star"></span>
 							</div>
-							<span class="review-no">ë¦¬ë·°ì¹¸</span>
+							<span class="review-no">41 reviews</span>
 						</div>
 						<p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
 						<h4 class="price">current price: <span>$180</span></h4>
