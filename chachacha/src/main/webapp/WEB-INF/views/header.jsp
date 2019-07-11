@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,7 +17,8 @@
 			<nav id="menu">
 				<ul id="menu-nav">
 					<li class="current"><a href="#home-slider">Home</a></li>
-					<li><a href="productcommit.cha">»óÇ°µî·Ï</a></li>
+					<li><a href="productcommit.cha">ìƒí’ˆë“±ë¡</a></li>
+					<li><a href="BoardList.bo">ê²Œì‹œíŒ</a></li>
 					<li><a href="#about">About Us</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<li><a href="shortcodes.html" class="external">Shortcodes</a></li>

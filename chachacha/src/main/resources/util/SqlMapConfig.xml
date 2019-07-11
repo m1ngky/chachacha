@@ -4,14 +4,13 @@
 
 <configuration>
 	<typeAliases>
-		
-		
-		
+		<typeAlias alias="board" type="c.h.a.domain.Board"/>
 	 </typeAliases>
 	 
 	 <mappers>
-	 
-	 
+	 	<mapper resource="sql/board.xml"/>
 	 
 	 </mappers>
 </configuration>
+
+

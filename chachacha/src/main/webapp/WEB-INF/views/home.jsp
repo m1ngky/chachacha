@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +47,7 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="MobileOptimized" content="320" />
 
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <meta name="description" content="Insert Your Site Description" />
 
 
@@ -394,7 +394,7 @@
 				<div class="span12">
 					<div class="title-page">
 						<h2 class="title">Get in Touch</h2>
-						<h3 class="title-description">We’re currently accepting new
+						<h3 class="title-description">We占쏙옙re currently accepting new
 							client projects. We look forward to serving you.</h3>
 					</div>
 				</div>

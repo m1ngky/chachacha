@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ÆÇ¸ÅÀÚ »óÇ°µî·Ï ÆäÀÌÁöÀÔ´Ï´Ù</title>
+<title>íŒë§¤ìž ìƒí’ˆë“±ë¡ íŽ˜ì´ì§€ìž…ë‹ˆë‹¤</title>
 <link href="css/mingky.css" rel="stylesheet">
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
