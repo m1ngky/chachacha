@@ -142,7 +142,7 @@ function ajax(data){
 $.ajax({   
    type : "POST",
    data : data,
-   url : "BoardListAjax.bo",
+   url : "BoardList.bo",
    dataType : "json",
    cache : false,
    success : function(data) {

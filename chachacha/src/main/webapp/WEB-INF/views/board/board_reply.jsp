@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 		<title>MVC 게시판</title>
 		<jsp:include page="header.jsp" />
-		<script src="resources/js/writeform.js" charset="UTF-8"></script>
+		<script src="js/writeform.js" charset="UTF-8"></script>
 		<style>
 			tr.center-block {
 				text-align : center;
@@ -43,7 +43,7 @@
 			<input type="hidden" name="BOARD_RE_LEV" value="${boarddata.BOARD_RE_LEV}">
 			<input type="hidden" name="BOARD_RE_SEQ" value="${boarddata.BOARD_RE_SEQ}">
 		
-			<h1>MVC 게시판-Reply</h1>
+			<h1>게시판-Reply</h1>
 			<div class="form-group">
 				<label for="board_name">글쓴이</label>
 				<input name="BOARD_NAME" id="board_name" value="${id}" readOnly type="text"

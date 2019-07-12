@@ -13,6 +13,7 @@
 	display: flex;
 	justify-content: center; /* 가운데 정렬 */
 }
+
 </style>
 </head>
 <body>

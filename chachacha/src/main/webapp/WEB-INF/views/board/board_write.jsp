@@ -4,9 +4,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-		<title>MVC 게시판</title>
+		<title>게시판</title>
 		<jsp:include page="header.jsp" />
-		<script src="resources/js/writeform.js" charset="UTF-8"></script>
+		<script src="js/writeform.js" charset="UTF-8"></script>
 		<style>
 			tr.center-block {
 				text-align : center;
@@ -38,7 +38,7 @@
 <body>
 	<div class="container">
 		<form action="BoardAddAction.bo" method="post" enctype="multipart/form-data" name="boardform">
-			<h1>MVC 게시판-write 페이지</h1>
+			<h1>게시판 글쓰기 페이지</h1>
 			<div class="form-group">
 				<label for="board_name">글쓴이</label>
 				<input name="BOARD_NAME" id="board_name" value="${id}" readOnly type="text" size="10" maxlength="30" 

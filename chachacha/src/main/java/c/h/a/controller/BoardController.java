@@ -135,7 +135,7 @@ public class BoardController {
 		public ModelAndView write(HttpSession session, ModelAndView mv) throws Exception {
 
 			String id = (String) session.getAttribute("id");
-			mv.setViewName("board/qna_board_write");
+			mv.setViewName("board/board_write");
 			mv.addObject("id", id);
 
 			return mv;
@@ -156,7 +156,7 @@ public class BoardController {
 			} else {
 				System.out.println("상세보기 성공");
 				int count = commentService.getListCount(num);
-				mv.setViewName("board/qna_board_view");
+				mv.setViewName("board/board_view");
 				mv.addObject("count", count);
 				mv.addObject("boarddata", board);
 			}
@@ -168,7 +168,7 @@ public class BoardController {
 		public ModelAndView modifyview(@RequestParam(value = "num") int num, Board board, ModelAndView mv) {
 
 			board = boardService.getDetail(num);
-			mv.setViewName("board/qna_board_modify");
+			mv.setViewName("board/board_modify");
 			mv.addObject("boarddata", board);
 
 			return mv;
@@ -330,7 +330,7 @@ public class BoardController {
 				mv.addObject("message", "게시판 답변글 가져오기 실패");
 			} else {
 				mv.addObject("boarddata", board);
-				mv.setViewName("board/qna_board_reply");
+				mv.setViewName("board/board_reply");
 			}
 			return mv;
 
