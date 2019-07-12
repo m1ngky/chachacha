@@ -4,13 +4,13 @@
 
 <configuration>
 	<typeAliases>
-		
+		<typeAlias alias="member" type="c.h.a.domain.Member"/>
 		
 		
 	 </typeAliases>
 	 
 	 <mappers>
-	 
+	     <mapper resource="sql/member.xml"/>
 	 
 	 
 	 </mappers>
