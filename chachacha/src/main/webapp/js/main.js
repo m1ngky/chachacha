@@ -1,3 +1,4 @@
+
 jQuery(function($){
 
 var BRUSHED = window.BRUSHED || {};
@@ -77,10 +78,18 @@ BRUSHED.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
+<<<<<<< HEAD
 											{image : 'img/slider-images/image01.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
 											{image : 'img/slider-images/image02.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
 											{image : 'img/slider-images/image03.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
 											{image : 'img/slider-images/image04.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''}  
+=======
+											{image : ' img/chungha.jpg', title : '<div class="slide-content">CHACHACHA</div>', thumb : '', url : ''},
+											{image : ' img/suzy.jpg', title : '<div class="slide-content">한머운</div>', thumb : '', url : ''},
+											{image : ' img/yaeon.jfif', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
+											{image : ' img/iu.jfif', title : '<div class="slide-content">IU</div>', thumb : '', url : ''}
+											//메인이미지 바뀌는거
+>>>>>>> refs/remotes/origin/master
 									],
 									
 		// Theme Options			   
@@ -96,10 +105,17 @@ BRUSHED.slider = function(){
    Navigation Fix
 ================================================== */
 
+<<<<<<< HEAD
 /*BRUSHED.nav = function(){
 	$('.sticky-nav').waypoint('sticky');
 }
 */
+=======
+//BRUSHED.nav = function(){
+//	$('.sticky-nav').waypoint('sticky');
+//}
+
+>>>>>>> refs/remotes/origin/master
 
 /* ==================================================
    Filter Works
@@ -195,7 +211,11 @@ BRUSHED.contactForm = function(){
 		
 		$.ajax({
 			type: "POST",
+<<<<<<< HEAD
 			url: "php/contact.php",
+=======
+			url: " php/contact.php",
+>>>>>>> refs/remotes/origin/master
 			data: fields,
 			dataType: 'json',
 			success: function(response) {
@@ -405,10 +425,14 @@ $(document).ready(function(){
 	Modernizr.load([
 	{
 		test: Modernizr.placeholder,
+<<<<<<< HEAD
 		nope: 'js/placeholder.js', 
+=======
+		nope: ' js/placeholder.js', 
+>>>>>>> refs/remotes/origin/master
 		complete : function() {
 				if (!Modernizr.placeholder) {
-						Placeholders.init({
+						Placeholder.init({
 						live: true,
 						hideOnFocus: false,
 						className: "yourClass",

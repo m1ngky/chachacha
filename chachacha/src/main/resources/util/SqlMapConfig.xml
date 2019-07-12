@@ -4,14 +4,24 @@
 
 <configuration>
 	<typeAliases>
+<<<<<<< HEAD
 		<typeAlias alias="member" type="c.h.a.domain.Member"/>
 		
 		
+=======
+		<typeAlias alias="board" type="c.h.a.domain.Board"/>
+>>>>>>> refs/remotes/origin/master
 	 </typeAliases>
 	 
 	 <mappers>
+<<<<<<< HEAD
 	     <mapper resource="sql/member.xml"/>
 	 
+=======
+	 	<mapper resource="sql/board.xml"/>
+>>>>>>> refs/remotes/origin/master
 	 
 	 </mappers>
 </configuration>
+
+

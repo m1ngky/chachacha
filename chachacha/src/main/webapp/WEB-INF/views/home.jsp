@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 <meta charset="UTF-8">
 <meta name="description" content="Insert Your Site Description" />
 
@@ -13,6 +14,9 @@
 
 <title>Insert title here</title>
 
+=======
+<link href="css/bootstrap.min.css" rel="stylesheet">
+>>>>>>> refs/remotes/origin/master
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Main Style -->
@@ -51,6 +55,15 @@
 <link rel="apple-touch-icon" sizes="114x114" href="#">
 <link rel="apple-touch-icon" sizes="72x72" href="#">
 <link rel="apple-touch-icon" sizes="144x144" href="#">
+<!-- Mobile Specifics -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+
+<meta charset="UTF-8">
+<meta name="description" content="Insert Your Site Description" />
+
+
 <!-- Modernizr -->
 <script src="js/modernizr.js"></script>
 
@@ -103,10 +116,9 @@
 	<!-- End Homepage Slider -->
 
 	<!-- Header -->
-	<header>
-		<div class="sticky-nav">
-			<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+	<jsp:include page="header.jsp"></jsp:include>
 
+<<<<<<< HEAD
 			<div id="logo">
 				<a id="goUp" href="login.net"
 					title="Brushed | Responsive One Page Template">Brushed Template</a>
@@ -115,7 +127,10 @@
 					title="Brushed | Responsive One Page Template">Brushed Template</a>
 					 -->
 			</div>
+=======
+>>>>>>> refs/remotes/origin/master
 
+<<<<<<< HEAD
 			<nav id="menu">
 				<ul id="menu-nav">
 					<li class="current"><a href="#home-slider">Home</a></li>
@@ -129,6 +144,8 @@
 
 		</div>
 	</header>
+=======
+>>>>>>> refs/remotes/origin/master
 	<!-- End Header -->
 
 	<!-- Our Work Section -->
