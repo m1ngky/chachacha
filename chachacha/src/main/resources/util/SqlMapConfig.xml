@@ -4,11 +4,21 @@
 
 <configuration>
 	<typeAliases>
+
+		<typeAlias alias="member" type="c.h.a.domain.Member"/>
+		
+		
+
 		<typeAlias alias="board" type="c.h.a.domain.Board"/>
+
 	 </typeAliases>
 	 
 	 <mappers>
+
+	     <mapper resource="sql/member.xml"/>
+
 	 	<mapper resource="sql/board.xml"/>
+
 	 
 	 </mappers>
 </configuration>

@@ -1,4 +1,10 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/home.jsp=UTF-8
+<<<<<<< HEAD
+encoding//src/main/webapp/WEB-INF/views/member/joinform.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/member/loginform.jsp=UTF-8
+encoding//src/main/webapp/index.jsp=UTF-8
+=======
 encoding//src/main/webapp/WEB-INF/views/productcommit.jsp=UTF-8
 encoding//src/main/webapp/js/main.js=UTF-8
+>>>>>>> refs/remotes/origin/master

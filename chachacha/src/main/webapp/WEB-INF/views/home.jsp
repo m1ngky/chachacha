@@ -3,7 +3,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
+<meta charset="UTF-8">
+<meta name="description" content="Insert Your Site Description" />
+
+<!-- Mobile Specifics -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+
+<title>Insert title here</title>
+
+=======
 <link href="css/bootstrap.min.css" rel="stylesheet">
+>>>>>>> refs/remotes/origin/master
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Main Style -->
@@ -106,8 +119,11 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 
-	<!-- End Header -->
+			
 
+
+	
+	
 	<!-- Our Work Section -->
 	<div id="work" class="page">
 		<div class="container">
@@ -150,8 +166,7 @@
 								<li class="item-thumbs span3 design">
 									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
-									title="The City"
-									href=" img/work/full/image-01-full.jpg"> <span
+									title="The City" href="img/work/full/image-01-full.jpg"> <span
 										class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
 								</a> <!-- Thumb Image and Description --> <img
@@ -164,9 +179,8 @@
 								<li class="item-thumbs span3 design">
 									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
-									title="The Office"
-									href=" img/work/full/image-02-full.jpg"> <span
-										class="overlay-img"></span> <span
+									title="The Office" href="img/work/full/image-02-full.jpg">
+										<span class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
 								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-02.jpg"
@@ -178,9 +192,8 @@
 								<li class="item-thumbs span3 photography">
 									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
-									title="The Mountains"
-									href=" img/work/full/image-03-full.jpg"> <span
-										class="overlay-img"></span> <span
+									title="The Mountains" href="img/work/full/image-03-full.jpg">
+										<span class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
 								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-03.jpg"
@@ -204,8 +217,8 @@
 								<li class="item-thumbs span3 photography">
 									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
-									title="The Sea" href=" img/work/full/image-04-full.jpg">
-										<span class="overlay-img"></span> <span
+									title="The Sea" href="img/work/full/image-04-full.jpg"> <span
+										class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
 								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-04.jpg"
@@ -217,8 +230,8 @@
 								<li class="item-thumbs span3 photography">
 									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
-									title="Clouds" href=" img/work/full/image-05-full.jpg">
-										<span class="overlay-img"></span> <span
+									title="Clouds" href="img/work/full/image-05-full.jpg"> <span
+										class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
 								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-05.jpg"
@@ -242,8 +255,7 @@
 								<li class="item-thumbs span3 design">
 									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
-									title="The Dark"
-									href=" img/work/full/image-06-full.jpg"> <span
+									title="The Dark" href="img/work/full/image-06-full.jpg"> <span
 										class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
 								</a> <!-- Thumb Image and Description --> <img
@@ -256,9 +268,8 @@
 								<li class="item-thumbs span3 design">
 									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
-									title="The Beach"
-									href=" img/work/full/image-07-full.jpg"> <span
-										class="overlay-img"></span> <span
+									title="The Beach" href="img/work/full/image-07-full.jpg">
+										<span class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
 								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-07.jpg"
@@ -356,8 +367,7 @@
 							<span class="overlay-img"></span> <span
 								class="overlay-text-thumb">Lead Designer</span>
 						</div>
-						<img src=" img/profile/profile-03.jpg"
-							alt="Joshua Insanus">
+						<img src=" img/profile/profile-03.jpg" alt="Joshua Insanus">
 					</div>
 					<h3 class="profile-name">Joshua Insanus</h3>
 					<p class="profile-description">

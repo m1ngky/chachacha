@@ -17,6 +17,7 @@ public class HomeController {
 		
 		return "home";
 	}
+
 	
 	@RequestMapping(value="/productcommit.cha")
 	public String productcommit() {

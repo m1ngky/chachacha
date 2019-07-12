@@ -78,11 +78,18 @@ BRUSHED.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
+
+											{image : 'img/slider-images/image01.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
+											{image : 'img/slider-images/image02.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
+											{image : 'img/slider-images/image03.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
+											{image : 'img/slider-images/image04.jpg', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''} , 
+
 											{image : ' img/chungha.jpg', title : '<div class="slide-content">CHACHACHA</div>', thumb : '', url : ''},
 											{image : ' img/suzy.jpg', title : '<div class="slide-content">한머운</div>', thumb : '', url : ''},
 											{image : ' img/yaeon.jfif', title : '<div class="slide-content">Brushed</div>', thumb : '', url : ''},
 											{image : ' img/iu.jfif', title : '<div class="slide-content">IU</div>', thumb : '', url : ''}
 											//메인이미지 바뀌는거
+
 									],
 									
 		// Theme Options			   
@@ -98,9 +105,16 @@ BRUSHED.slider = function(){
    Navigation Fix
 ================================================== */
 
+
+/*BRUSHED.nav = function(){
+	$('.sticky-nav').waypoint('sticky');
+}
+*/
+
 //BRUSHED.nav = function(){
 //	$('.sticky-nav').waypoint('sticky');
 //}
+
 
 
 /* ==================================================
@@ -197,7 +211,11 @@ BRUSHED.contactForm = function(){
 		
 		$.ajax({
 			type: "POST",
+
+			url: "php/contact.php",
+
 			url: " php/contact.php",
+
 			data: fields,
 			dataType: 'json',
 			success: function(response) {
@@ -407,7 +425,11 @@ $(document).ready(function(){
 	Modernizr.load([
 	{
 		test: Modernizr.placeholder,
+
+		nope: 'js/placeholder.js', 
+
 		nope: ' js/placeholder.js', 
+
 		complete : function() {
 				if (!Modernizr.placeholder) {
 						Placeholder.init({
