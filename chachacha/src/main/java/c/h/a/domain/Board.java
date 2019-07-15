@@ -4,97 +4,99 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class Board {
 
-	private int BOARD_NUM;		//글번호
-	private String BOARD_NAME;	//글 작성자
-	private String BOARD_PASS;	// 글 비밀번호
-	private String BOARD_SUBJECT;// 글 제목
-	private String BOARD_CONTENT;// 글내용
-	private String BOARD_FILE;	//실제 저장된 파일의 이름
-	private int	   BOARD_RE_REF;// 답변 글 작성시 참조되는 글의 번호
-	private int	   BOARD_RE_LEV;// 답변 글의 깊이
-	private int	   BOARD_RE_SEQ;// 답변 글의 순서
-	private int	   BOARD_READCOUNT;//글의 조회수
-	private String BOARD_ORIGINAL; // 첨부될 파일의 이름
+	private int num;
+	private String name;
+	private String password;
+	private String category;
+	private String ccategory;
+	private int readcount;
+	private String subject;
+	private String content;
+	private String price;
+	private String gprice;
 	private MultipartFile uploadfile;
-	
-	private String BOARD_DATE;
-	public String getBOARD_DATE() {
-		return BOARD_DATE;
+	private String filename="/image/default.png";         //첨부될 파일의 이름
+	private String originalfile="/image/default.png";      //첨부될 파일의 오리지널 이름
+	public int getNum() {
+		return num;
 	}
-	public void setBOARD_DATE(String bOARD_DATE) {
-		BOARD_DATE = bOARD_DATE.substring(0,10);
+	public void setNum(int num) {
+		this.num = num;
 	}
-	public int getBOARD_NUM() {
-		return BOARD_NUM;
+	public String getName() {
+		return name;
 	}
-	public void setBOARD_NUM(int bOARD_NUM) {
-		BOARD_NUM = bOARD_NUM;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getBOARD_NAME() {
-		return BOARD_NAME;
+	public String getPassword() {
+		return password;
 	}
-	public void setBOARD_NAME(String bOARD_NAME) {
-		BOARD_NAME = bOARD_NAME;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	public String getBOARD_PASS() {
-		return BOARD_PASS;
+	public String getCategory() {
+		return category;
 	}
-	public void setBOARD_PASS(String bOARD_PASS) {
-		BOARD_PASS = bOARD_PASS;
+	public void setCategory(String category) {
+		this.category = category;
 	}
-	public String getBOARD_SUBJECT() {
-		return BOARD_SUBJECT;
+	public String getCcategory() {
+		return ccategory;
 	}
-	public void setBOARD_SUBJECT(String bOARD_SUBJECT) {
-		BOARD_SUBJECT = bOARD_SUBJECT;
+	public void setCcategory(String ccategory) {
+		this.ccategory = ccategory;
 	}
-	public String getBOARD_CONTENT() {
-		return BOARD_CONTENT;
+	public int getReadcount() {
+		return readcount;
 	}
-	public void setBOARD_CONTENT(String bOARD_CONTENT) {
-		BOARD_CONTENT = bOARD_CONTENT;
+	public void setReadcount(int readcount) {
+		this.readcount = readcount;
 	}
-	public String getBOARD_FILE() {
-		return BOARD_FILE;
+	public String getSubject() {
+		return subject;
 	}
-	public void setBOARD_FILE(String bOARD_FILE) {
-		BOARD_FILE = bOARD_FILE;
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
-	public int getBOARD_RE_REF() {
-		return BOARD_RE_REF;
+	public String getContent() {
+		return content;
 	}
-	public void setBOARD_RE_REF(int bOARD_RE_REF) {
-		BOARD_RE_REF = bOARD_RE_REF;
+	public void setContent(String content) {
+		this.content = content;
 	}
-	public int getBOARD_RE_LEV() {
-		return BOARD_RE_LEV;
+	public String getPrice() {
+		return price;
 	}
-	public void setBOARD_RE_LEV(int bOARD_RE_LEV) {
-		BOARD_RE_LEV = bOARD_RE_LEV;
+	public void setPrice(String price) {
+		this.price = price;
 	}
-	public int getBOARD_RE_SEQ() {
-		return BOARD_RE_SEQ;
+	public String getGprice() {
+		return gprice;
 	}
-	public void setBOARD_RE_SEQ(int bOARD_RE_SEQ) {
-		BOARD_RE_SEQ = bOARD_RE_SEQ;
+	public void setGprice(String gprice) {
+		this.gprice = gprice;
 	}
-	public int getBOARD_READCOUNT() {
-		return BOARD_READCOUNT;
-	}
-	public void setBOARD_READCOUNT(int bOARD_READCOUNT) {
-		BOARD_READCOUNT = bOARD_READCOUNT;
-	}
-	public String getBOARD_ORIGINAL() {
-		return BOARD_ORIGINAL;
-	}
-	public void setBOARD_ORIGINAL(String bOARD_ORIGINAL) {
-		BOARD_ORIGINAL = bOARD_ORIGINAL;
-	}
-	
 	public MultipartFile getUploadfile() {
 		return uploadfile;
 	}
 	public void setUploadfile(MultipartFile uploadfile) {
 		this.uploadfile = uploadfile;
 	}
+	public String getFilename() {
+		return filename;
+	}
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+	public String getOriginalfile() {
+		return originalfile;
+	}
+	public void setOriginalfile(String originalFile) {
+		this.originalfile = originalFile;
+	}
+	
+
+	
+	
 }

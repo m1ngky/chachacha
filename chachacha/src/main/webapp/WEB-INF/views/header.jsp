@@ -22,6 +22,7 @@
 					<li><a href="BoardList.bo">게시판</a></li>					
 					<li><a href="#contact">Contact</a></li>
 					<li><a href="shortcodes.html" class="external">Shortcodes</a></li>
+					<li><a href="ServiceCenter">ServiceCenter</li>
 				</ul>
 			</nav>
 
