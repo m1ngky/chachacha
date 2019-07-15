@@ -14,7 +14,7 @@ CREATE TABLE FMEMBER(
    phonenumber VARCHAR2(15),
    joindate VARCHAR2(10),
    mileage NUMBER(10),
-   account VARCHAR(30),
+   account VARCHAR(50),
    PRIMARY KEY(ID)
 );
 
