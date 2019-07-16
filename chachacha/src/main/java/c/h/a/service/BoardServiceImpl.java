@@ -23,7 +23,7 @@ public class BoardServiceImpl implements BoardService{
 	
 	@Autowired
 	private DataSourceTransactionManager transaction;
-
+ 
 	@Override
 	public int getServiceListCount(String category) {
 		return  dao.getServiceListCount(category);

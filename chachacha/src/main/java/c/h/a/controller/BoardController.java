@@ -49,7 +49,7 @@ public class BoardController {
 			   List<Board> boardlist = new ArrayList<Board>();
 			   
 			   int limit = 10; // 한 화면에 출력할 레코드 갯수
-		       String category = "C";
+		       String category = "C"; 
 			   	                        
 		         int listcount = boardService.getServiceListCount(category); // 총 리스트 수를 받아옴
 		         

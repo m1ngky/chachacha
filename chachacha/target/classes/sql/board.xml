@@ -25,7 +25,7 @@
 		insert into board
 		(NUM,
 		 NAME, category,ccategory,readcount,SUBJECT,
-		 CONTENT, filename,file_original,
+		 CONTENT, filename,file_original, 
 		 inputdate)
 		 values(
 		 #{NUM},#{NAME}, #{category},#{ccategory},#{readcount}, #{SUBJECT},

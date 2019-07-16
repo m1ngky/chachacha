@@ -15,7 +15,7 @@ public class BoardDAO {
 	
 	@Autowired
 	private SqlSessionTemplate sqlSession;
-
+ 
 	
 
 	public int getServiceListCount(String category) {
