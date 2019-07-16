@@ -27,6 +27,10 @@
 					<li><a href="login.net">Login</a></li>
 					</c:if>
 					
+					<c:if test="${id=='admin' }">
+                    <a href="member_list.net">회원 정보</a>
+                    </c:if>
+					
 					<li><a href="productcommit.cha">상품등록</a></li>
 					<li><a href="BoardList.bo">게시판</a></li>					
 					<li><a href="#contact">Contact</a></li>

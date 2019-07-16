@@ -12,13 +12,14 @@
  		select * from fmember where email = #{email}
  	</select>
  	
- 	<insert id="insert"  parameterType="member">
- 		insert  into fmember values(#{id},#{password},#{name},#{nickname},#{birth},#{gender},#{email},#{address}
- 		,#{phonenumber},sysdate,0,#{account})
- 	</insert>
  	
  	<select id = "nicknamecheck" resultType="member" parameterType="String">
  		select * from fmember where nickname = #{nickname}
  	</select>
+ 	
+ 	
+ 	<insert id="insert"  parameterType="member">
+ 		insert  into fmember values(#{id},#{password},#{name},#{nickname},#{birth},#{gender},#{email},#{address},#{phonenumber},sysdate,0,#{account},'구매자')
+ 	</insert>
  	
  </mapper>
