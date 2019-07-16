@@ -4,7 +4,7 @@
 
  <mapper namespace="Members">
  	<select id = "idcheck" resultType="member" parameterType="String">
- 		select * from member where id = #{id}
+ 		select * from fmember where id = #{id}
  	</select>
  	
  	
@@ -13,7 +13,7 @@
  	</select>
  	
  	<insert id="insert"  parameterType="member">
- 		insert  into member values(#{id},#{password},#{name},#{nickname},#{birth},#{gender},#{email},#{address}
+ 		insert  into fmember values(#{id},#{password},#{name},#{nickname},#{birth},#{gender},#{email},#{address}
  		,#{phonenumber},sysdate,0,#{account})
  	</insert>
  	

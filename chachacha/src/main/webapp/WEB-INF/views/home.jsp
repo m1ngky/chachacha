@@ -140,10 +140,9 @@
 			<!-- End Title Page -->
 
 			<!-- Portfolio Projects -->
-			
-			<!-- <div class="row">
+			<div class="row">
 				<div class="span3">
-					Filter
+					<!-- Filter -->
 					<nav id="options" class="work-nav">
 						<ul id="filters" class="option-set" data-option-key="filter">
 							<li class="type-work">Type of Work</li>
@@ -154,7 +153,7 @@
 							<li><a href="#filter" data-option-value=".video">Video</a></li>
 						</ul>
 					</nav>
-					End Filter
+					<!-- End Filter -->
 				</div>
 
 				<div class="span9">
@@ -162,146 +161,130 @@
 						<section id="projects">
 							<ul id="thumbs">
 
-								Item Project and Filter Name
+								<!-- Item Project and Filter Name -->
 								<li class="item-thumbs span3 design">
-									Fancybox - Gallery Enabled - Title - Full Image <a
+									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
 									title="The City" href="img/work/full/image-01-full.jpg"> <span
 										class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
-								</a> Thumb Image and Description <img
+								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-01.jpg"
 									alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
 								</li>
-								End Item Project
+								<!-- End Item Project -->
 
-								Item Project and Filter Name
+								<!-- Item Project and Filter Name -->
 								<li class="item-thumbs span3 design">
-									Fancybox - Gallery Enabled - Title - Full Image <a
+									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
 									title="The Office" href="img/work/full/image-02-full.jpg">
 										<span class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
-								</a> Thumb Image and Description <img
+								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-02.jpg"
 									alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
 								</li>
-								End Item Project
+								<!-- End Item Project -->
 
-								Item Project and Filter Name
+								<!-- Item Project and Filter Name -->
 								<li class="item-thumbs span3 photography">
-									Fancybox - Gallery Enabled - Title - Full Image <a
+									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
 									title="The Mountains" href="img/work/full/image-03-full.jpg">
 										<span class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
-								</a> Thumb Image and Description <img
+								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-03.jpg"
 									alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
 								</li>
-								End Item Project
+								<!-- End Item Project -->
 
-								Item Project and Filter Name
+								<!-- Item Project and Filter Name -->
 								<li class="item-thumbs span3 video">
-									Fancybox Media - Gallery Enabled - Title - Link to Video
+									<!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
 									<a class="hover-wrap fancybox-media"
 									data-fancybox-group="video" title="Video Content From Vimeo"
 									href="http://vimeo.com/51460511"> <span class="overlay-img"></span>
 										<span class="overlay-img-thumb font-icon-plus"></span>
-								</a> Thumb Image and Description <img
+								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-08.jpg" alt="Video">
 								</li>
-								End Item Project
+								<!-- End Item Project -->
 
-								Item Project and Filter Name
+								<!-- Item Project and Filter Name -->
 								<li class="item-thumbs span3 photography">
-									Fancybox - Gallery Enabled - Title - Full Image <a
+									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
 									title="The Sea" href="img/work/full/image-04-full.jpg"> <span
 										class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
-								</a> Thumb Image and Description <img
+								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-04.jpg"
 									alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
 								</li>
-								End Item Project
+								<!-- End Item Project -->
 
-								Item Project and Filter Name
+								<!-- Item Project and Filter Name -->
 								<li class="item-thumbs span3 photography">
-									Fancybox - Gallery Enabled - Title - Full Image <a
+									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
 									title="Clouds" href="img/work/full/image-05-full.jpg"> <span
 										class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
-								</a> Thumb Image and Description <img
+								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-05.jpg"
 									alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
 								</li>
-								End Item Project
+								<!-- End Item Project -->
 
-								Item Project and Filter Name
+								<!-- Item Project and Filter Name -->
 								<li class="item-thumbs span3 video">
-									Fancybox Media - Gallery Enabled - Title - Link to Video
+									<!-- Fancybox Media - Gallery Enabled - Title - Link to Video -->
 									<a class="hover-wrap fancybox-media"
 									data-fancybox-group="video" title="Video Content From Vimeo"
 									href="http://vimeo.com/50834315"> <span class="overlay-img"></span>
 										<span class="overlay-img-thumb font-icon-plus"></span>
-								</a> Thumb Image and Description <img
+								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-09.jpg" alt="Video">
 								</li>
-								End Item Project
+								<!-- End Item Project -->
 
-								Item Project and Filter Name
+								<!-- Item Project and Filter Name -->
 								<li class="item-thumbs span3 design">
-									Fancybox - Gallery Enabled - Title - Full Image <a
+									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
 									title="The Dark" href="img/work/full/image-06-full.jpg"> <span
 										class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
-								</a> Thumb Image and Description <img
+								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-06.jpg"
 									alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
 								</li>
-								End Item Project
+								<!-- End Item Project -->
 
-								Item Project and Filter Name
+								<!-- Item Project and Filter Name -->
 								<li class="item-thumbs span3 design">
-									Fancybox - Gallery Enabled - Title - Full Image <a
+									<!-- Fancybox - Gallery Enabled - Title - Full Image --> <a
 									class="hover-wrap fancybox" data-fancybox-group="gallery"
 									title="The Beach" href="img/work/full/image-07-full.jpg">
 										<span class="overlay-img"></span> <span
 										class="overlay-img-thumb font-icon-plus"></span>
-								</a> Thumb Image and Description <img
+								</a> <!-- Thumb Image and Description --> <img
 									src=" img/work/thumbs/image-07.jpg"
 									alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
 								</li>
-								End Item Project
+								<!-- End Item Project -->
 							</ul>
 						</section>
 
 					</div>
 				</div>
-			</div> -->
+			</div>
 			<!-- End Portfolio Projects -->
 		</div>
 	</div>
 	<!-- End Our Work Section -->
-	
-	<div id="product">
-		<div class="container">
-			<nav class="navbar navbar-default">
-  				<div class="container-fluid">
-				    <ul class="nav navbar-nav">
-				      <li><a href="productList.bo?p_category">전체상품</a></li>
-				      <li><a href="productList.bo?p_category=A">생활&가전</a></li>
-				      <li><a href="productList.bo?p_category=B">뷰티&다이어트</a></li>
-				      <li><a href="productList.bo?p_category=C">푸드</a></li>
-				    </ul>
-  				</div>
-			</nav>
-		</div>
-		
-	</div>
 
 	<!-- About Section -->
 	<div id="about" class="page-alternate">
@@ -410,7 +393,6 @@
 		</div>
 	</div>
 	<!-- End About Section -->
-	
 
 
 	<!-- Contact Section -->

@@ -7,10 +7,9 @@
 
 		<typeAlias alias="member" type="c.h.a.domain.Member"/>
 
-
-
-		<typeAlias alias="product" type="c.h.a.domain.Product"/>
-		<typeAlias alias="cart" type="c.h.a.domain.Cart"/>
+		<typeAlias alias="product" type="c.h.a.domain.Products"/>
+		
+		
 
 		<typeAlias alias="board" type="c.h.a.domain.Board"/>
 
@@ -19,12 +18,9 @@
 	 <mappers>
 
 	     <mapper resource="sql/member.xml"/>
+	     <mapper resource="sql/Products.xml"/>
 
-
-		<mapper resource="sql/product.xml"/>
 	 	<mapper resource="sql/board.xml"/>
-	 	<mapper resource="sql/cart.xml"/>
-
 
 	 
 	 </mappers>
