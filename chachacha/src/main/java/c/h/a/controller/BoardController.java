@@ -1,18 +1,12 @@
 package c.h.a.controller;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-
 
 import c.h.a.domain.Board;
 import c.h.a.service.BoardService;
@@ -37,10 +30,19 @@ public class BoardController {
 	@Autowired
 	private CommentService commentService;
 	
-	// 글 목록보기
+	
+	@RequestMapping(value = "/ServiceQuestion.bo")
+	   public ModelAndView write(HttpSession session, ModelAndView mv) throws Exception {
+
+	      String id = (String) session.getAttribute("id");
+	      mv.setViewName("ServiceCenter/ServiceQuestion");
+	      mv.addObject("id", id);
+
+	      return mv;
+	   }
 		
 			
-		
+	// 글 목록보기
 		@RequestMapping("ServiceCenter")
 		   public ModelAndView ServiceCenterMain(
 		            @RequestParam(value="page",defaultValue = "1")int page,         
@@ -85,7 +87,7 @@ public class BoardController {
 		             return mv;  
 		       }
 		   
-		   @PostMapping("/ServiceQuestion.bo")
+		   @PostMapping("/ServiceAdd.bo")
 		   public String ServiceQuestion(Board board, 
 		         HttpServletRequest request) 
 		               throws Exception{

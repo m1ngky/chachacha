@@ -6,8 +6,8 @@ create table Fboard(
    id      VARCHAR2(15),            --작성자
    password varchar2(30),         --비밀번호
    category varchar2(1) check(category in('B','S','G','C','N')), -- 종류(Buy,Sale,Group,Service,공지사항)
-   Ccategory varchar2(1) check(Ccategory in('d','c','s','r','m','o')), --고객센터 종류
-                           --(배달,교환/환불,주문/결제,영수증/증빙서류,기타)
+   ccategory varchar2(1) check(Ccategory in('d','c','s','r','m','o')), --고객센터 종류
+                           --(배송,교환/환불,주문/결제,영수증/증빙서류,기타)
    readcount number,               --조회수
    SUBJECT   VARCHAR2(300),            --제목
    CONTENT   VARCHAR2(4000),            --내용

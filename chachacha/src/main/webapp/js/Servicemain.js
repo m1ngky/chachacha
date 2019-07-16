@@ -227,8 +227,10 @@ $.ajax({
 
 $(function() {
 
-   $("button").click(function() {
-      location.href = "BoardWrite.bo";
+   $("button").click(function(e) {
+	   e.preventDefault();
+	   console.log("88");
+      location.href = "ServiceQuestion.bo";
    })
 
 

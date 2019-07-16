@@ -19,8 +19,8 @@
 	
 	<insert id="insert" parameterType="board">
 		<selectKey resultType="int" order="BEFORE"
-					keyColumn="NUM"  keyProperty="NUM">
-			select nvl(max(NUM),0)+1 from fboard
+					keyColumn="num"  keyProperty="num">
+			select nvl(max(num),0)+1 from fboard
 		</selectKey>
 		insert into board
 		(NUM,
