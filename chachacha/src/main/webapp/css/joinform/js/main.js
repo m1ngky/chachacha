@@ -19,7 +19,8 @@
     	var birthdate = $('#birthdate').val();
     	$('#birth').val(birthdate);
     })
-
+    
+   
 
     /*==================================================================
     [ Validate after type ]*/
@@ -71,6 +72,10 @@
             }
         }
     }
+    
+
+    
+    
 
     function showValidate(input) {
         var thisAlert = $(input).parent();

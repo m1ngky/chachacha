@@ -340,6 +340,11 @@ iframe {
 	width:50%
 }
 
+#bankselect{
+	width:50%
+}
+
+
 /*==================================================================
 [ Restyle Checkbox ]*/
 
@@ -423,8 +428,8 @@ iframe {
   overflow: hidden;
 }
 
-#bank{
-	width:30%
+#bankselect{
+	width:20%
 }
 
 .login100-form-bgbtn {
@@ -534,6 +539,14 @@ iframe {
     visibility: visible;
     opacity: 1;
   }
+}
+
+#message{
+	width:300%
+}
+
+#emailcheck{
+	width:300%
 }
 
 .true-validate::after {

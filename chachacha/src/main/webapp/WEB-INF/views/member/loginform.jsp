@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +27,7 @@
 	<link rel="stylesheet" type="text/css" href="css/loginform/css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/loginform/css/main.css">
 <!--===============================================================================================-->
+
 </head>
 <body>
 	<div class="limiter">
@@ -50,25 +52,33 @@
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="flex-sb-m w-full p-b-30">
-						<div class="contact100-form-checkbox">
+
+					  <div class="flex-sb-m w-full p-b-30">
+				 
+						<!-- <div class="contact100-form-checkbox">
+						
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 							<label class="label-checkbox100" for="ckb1">
 								Remember me
 							</label>
-						</div>
-
+							
+						</div>  -->
+						<div>
+					<div class="contact100-form-checkbox">
 						<div>
 							<a href="join.net" class="txt1">
-								Sign up?
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" onClick="location.href='join.net'">
+							<label class="label-checkbox100" for="ckb1">
+								회원이 아니신가요?
+							</label>
 							</a>
 						</div>
 					</div>
-
+					<br>
 					<div class="container-login100-form-btn">
 					<input type="submit" class="login100-form-btn" value="Login">
 					</div>
-					
+					</div>
 					
 					
 					

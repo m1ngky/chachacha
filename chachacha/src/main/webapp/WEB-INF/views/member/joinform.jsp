@@ -1,4 +1,8 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
+
+<%@ page language="java" contentType="text/html; charset=utf-8"
+
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -32,6 +36,8 @@
 <!--===============================================================================================-->
 <script src="css/joinform/js/jquery-3.0.0.js"></script>
 <script src="css/joinform/js/join.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
 
 </head>
 
@@ -49,26 +55,28 @@
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Name</span>
-						<input class="input100" type="text" name="name" placeholder="Name...">
+						<input class="input100" type="text" name="name" placeholder="">
 						<span class="focus-input100"></span>
 					</div>
 					
 				    <div class="wrap-input100 validate-input" data-validate="NickName is required">
 						<span class="label-input100">NickName</span>
-						<input class="input100" type="text" name="nickname" placeholder="NickName...">
+						<input id="nickname" class="input100" type="text" name="nickname" placeholder="">
+						<span id="nicknamecheck"></span>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Email Address...">
+						<input id="email" class="input100" type="text" name="email" placeholder="">
+						<span id="emailcheck"></span>
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="ID is required">
 						<span class="label-input100">ID</span>
 						
-						<input class="input100" type="text" id="id" name="id" placeholder="ID...">
+						<input class="input100" type="text" id="id" name="id" placeholder="">
 						<span id="message"></span>
 						<span class="focus-input100"></span>
 					</div>
@@ -82,20 +90,21 @@
 
 					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Repeat Password</span>
-						<input id="repeat-password" class="input100" type="text" name="repeat-password" placeholder="*************">
+						<input id="repeat_password" class="input100" type="text" name="repeat-password" placeholder="*************">
 						<span id="validate_passcheck"></span>
 						<span class="focus-input100"></span>
 					</div>
 					
 					<div class="wrap-input100 validate-input" data-validate = "PhoneNumber is required">
 						<span class="label-input100">PhoneNumber</span>
-						<input class="input100" type="text" name="phonenumber" placeholder="010-1234-5678">
+						<input class="input100" type="text" name="phonenumber" id="phonenumber" placeholder="010-1234-5678">
+						<span id="phonecheck"></span>
 						<span class="focus-input100"></span>
 					</div>
 					
 					<div class="wrap-input100 validate-input" data-validate = "Address is required">
 						<span class="label-input100">Address</span>
-						<input class="input100" type="text" name="address" placeholder="Address">
+						<input class="input100" type="text" name="address" placeholder="">
 						<span class="focus-input100"></span>
 					</div>
 					
@@ -121,11 +130,15 @@
 					
 					<div class="wrap-input100 validate-input" data-validate = "Account is required">
 						<span class="label-input100">Account</span><br><br>
-						 <select id="bank" class="form-control" name="bank">
-                            <option value="nbank">NH Bank</option>
-                            <option value="sbank">Shinhan Bank</option>
+						 <select id="bankselect" class="form-control" name="bankselect" style="width:30%;height:27%;">
+						    <option value="">은행</option>
+                            <option value="농협은행  :   ">농협은행</option>
+                            <option value="신한은행  :   ">신한은행</option>
+                            <option value="기업은행  :   ">기업은행</option>
+                            <option value="우리은행  :   ">우리은행</option>
+                            <option value="국민은행  :   ">국민은행</option>
                         </select>
-						<input class="input100" type="text" name="account" placeholder="12345-67-890123">
+						<input id="account" class="input100" type="text" name="account" placeholder="12345-67-890123">
 						<span class="focus-input100"></span>
 					</div>
 
