@@ -20,7 +20,7 @@
 	<div class="container">
 
 		<%-- 게시글이 있는경우 --%>
-		<c:if test="${listcount>0 }">
+		<c:if test="${listcount>0}">
 
 			<div class="rows">
 				<span>줄보기</span> <select class="form-control" id="viewcount">
@@ -35,7 +35,7 @@
 				<thead>
 					<tr>
 						<th colspan="3">MVC 게시판 - list</th>
-						<th colspan="2"><font size=3>글 개수 : ${listcount }</font></th>
+						<th colspan="2"><font size=3>글 개수 : ${listcount}</font></th>
 					</tr>
 					<tr>
 						<th width="8%"><div>번호</div></th>
@@ -48,25 +48,25 @@
 				</thead>
 
 				<tbody>
-					<c:set var="num" value="${listcount-(page-1)*limit }" />
+					<c:set var="num" value="${listcount-(page-1)*limit}" />
 					<c:forEach var="list" items="${boardlist}">
 						<tr>
-							<td width="8%"><c:out value="${num }" /> <%-- num출력 --%> <c:set
-									var="num" value="${num-1 }" /> <%-- num=num-1; 의미 --%></td>
+							<td width="8%"><c:out value="${num}" /> <%-- num출력 --%> 
+							<c:set var="num" value="${num-1}" /> <%-- num=num-1; 의미 --%></td>
 							<td>
 								<div>
 										<!-- 원문인 경우 -->
                               &nbsp;      
       
       
-									<a href="./BoardDetailAction.bo?num=${list.Num }">
-										${list.Subject } </a>
+									<a href="./BoardDetailAction.bo?num=${list.NUM}">
+										${list.SUBJECT}</a>
 								</div>
 							</td>
 
 							<td width="14%"><div>${list.id }</div></td>
-							<td width="17%"><div>${list.InputDate}</div></td>
-							<td width="11%"><div>${list.readcount }</div></td>
+							<td width="17%"><div>${list.inputDATE}</div></td>
+							<td width="11%"><div>${list.READCOUNT}</div></td>
 						</tr>
 					</c:forEach>
 
@@ -86,11 +86,11 @@
 							</c:if>
 							<c:if test="${page > 1 }">
 								<li class="page-item"><a
-									href="./BoardList.bo?page=${page-1 }" class="page-link">이전&nbsp;</a></li>
+									href="./BoardList.bo?page=${page-1}" class="page-link">이전&nbsp;</a></li>
 							</c:if>
 
 							<%--숫자 나온는것 처리 --%>
-							<c:forEach var="a" begin="${startpage }" end="${endpage }">
+							<c:forEach var="a" begin="${startpage}" end="${endpage}">
 
 								<c:if test="${a==page}">
 									<li class="page-item"><a class="page-link gray">${a }</a>
@@ -108,7 +108,7 @@
 							</c:if>
 							<c:if test="${page < maxpage}">
 								<li class="page-item"><a
-									href="./BoardList.bo?page=${page+1 }" class="page-link ">&nbsp;다음</a>
+									href="./BoardList.bo?page=${page+1}" class="page-link ">&nbsp;다음</a>
 								</li>
 							</c:if>
 
@@ -124,7 +124,7 @@
 
 
 		<!-- 게시글이 없는경우 -->
-		<c:if test="${listcount == 0 }">
+		<c:if test="${listcount == 0}">
 			<font size=5>등록된 글이 없습니다.</font>
 		</c:if>
 

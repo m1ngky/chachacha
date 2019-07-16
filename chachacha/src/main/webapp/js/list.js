@@ -54,12 +54,12 @@ $.ajax({
                      }
                      output += "<td><div>" + blank + img
                      output += ' <a href="BoardDetailAction.bo?num='
-                        +item.board_NUM + '&page='
+                        +item.NUM + '&page='
                         +data.page + '">'
-                     output += item.board_SUBJECT +'</a></div></td>'
-                     output += '<td><div>' + item.board_NAME+'</div></td>'
-                     output += '<td><div>' + item.board_DATE+'</div></td>'
-                     output += '<td><div>' + item.board_READCOUNT+'</div></td>'
+                     output += item.SUBJECT +'</a></div></td>'
+                     output += '<td><div>' + item.id+'</div></td>'
+                     output += '<td><div>' + item.InputDATE+'</div></td>'
+                     output += '<td><div>' + item.READCOUNT+'</div></td>'
                               +   '</div></td></tr>'
                         
                      

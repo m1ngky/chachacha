@@ -26,7 +26,7 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public List<Board> getBoardList(int page, int limit) {
+	public List<Board> getBoardList(int page, int limit, String category) {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		
 		int startrow = (page - 1) * limit + 1;	//읽기 시작할 row 번호

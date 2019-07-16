@@ -36,6 +36,8 @@ public class BoardController {
 	@RequestMapping(value = "/BoardList.bo")
 	public ModelAndView boardList(@RequestParam(value = "page", defaultValue = "1") int page, ModelAndView mv)
 			throws Exception {
+		
+		String category = "b";
 
 		int limit = 10; // 한 화면에 출력할 레코드 갯수
 		int listcount = boardService.getListCount(); // 총 리스트 수를 받아옴
@@ -52,7 +54,7 @@ public class BoardController {
 		if (endpage > maxpage)
 			endpage = maxpage;
 
-		List<Board> boardlist = boardService.getBoardList(page, limit);
+		List<Board> boardlist = boardService.getBoardList(page, limit, category);
 
 		mv.addObject("page", page);
 		mv.addObject("limit", limit);
@@ -74,6 +76,8 @@ public class BoardController {
 			@RequestParam(value = "limit", defaultValue = "10", required = false) int limit, ModelAndView mv)
 			throws Exception {
 
+		String category = "b";
+		
 		int listcount = boardService.getListCount(); // 총 리스트 수를 받아옴
 
 		// 총 페이지 수
@@ -91,7 +95,7 @@ public class BoardController {
 		if (endpage < page)
 			page = endpage;
 
-		List<Board> boardlist = boardService.getBoardList(page, limit);
+		List<Board> boardlist = boardService.getBoardList(page, limit, category);
 
 		BoardAjax ba = new BoardAjax();
 		ba.setPage(page);

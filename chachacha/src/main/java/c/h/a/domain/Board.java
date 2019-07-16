@@ -1,7 +1,5 @@
 package c.h.a.domain;
 
-import java.util.Date;
-
 import org.springframework.web.multipart.MultipartFile;
 
 public class Board {
@@ -19,7 +17,8 @@ public class Board {
 	private String FILEname;		//실제 저장될 파일 이름
 	private String OriginalFile;	//첨부될 파일 명
 	private MultipartFile uploadfile;	//업로드 파일
-	private Date inputdate;			//글 작성 날짜
+	private String InputDATE;			//글 작성 날짜
+	
 	public int getNUM() {
 		return NUM;
 	}
@@ -102,12 +101,13 @@ public class Board {
 	public void setUploadfile(MultipartFile uploadfile) {
 		this.uploadfile = uploadfile;
 	}
-	public Date getInputdate() {
-		return inputdate;
+	public String getInputDATE() {
+		return InputDATE;
 	}
-	public void setInputdate(Date inputdate) {
-		this.inputdate = inputdate;
+	public void setInputDATE(String inputDATE) {
+		InputDATE = inputDATE;
 	}
+
 	
 	
 }
