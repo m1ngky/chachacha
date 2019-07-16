@@ -19,7 +19,7 @@
 					<li class="current"><a href="#home-slider">Home</a></li>
 					<li><a href="login.net">Login</a></li>
 					<li><a href="productcommit.cha">상품등록</a></li>
-					<li><a href="BoardList.bo">게시판</a></li>					
+					<li><a href="BoardBuyList.bo">게시판</a></li>					
 					<li><a href="#contact">Contact</a></li>
 					<li><a href="shortcodes.html" class="external">Shortcodes</a></li>
 				</ul>

@@ -8,7 +8,7 @@
 <jsp:include page="header.jsp" />
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/list.js"></script>
-<title>MVC 게시판</title>
+<title>구매 게시판</title>
 <style>
 .center-block {
 	display: flex;
@@ -23,18 +23,18 @@
 		<c:if test="${listcount>0}">
 
 			<div class="rows">
-				<span>줄보기</span> <select class="form-control" id="viewcount">
-					<option value="1">1</option>
-					<option value="3">3</option>
-					<option value="5">5</option>
-					<option value="7">7</option>
-					<option value="10" selected>10</option>
+				<span>another</span> <select class="form-control" id="viewcount">
+					<option value="Buy">Buy</option>
+					<option value="Sale">Sale</option>
+					<option value="Group" selected>Group</option>
+					<option value="Service">Service</option>
+					<option value="Notice">공지사항</option>
 				</select>
 			</div>
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th colspan="3">MVC 게시판 - list</th>
+						<th colspan="3">공동구매 게시판</th>
 						<th colspan="2"><font size=3>글 개수 : ${listcount}</font></th>
 					</tr>
 					<tr>
@@ -59,14 +59,14 @@
                               &nbsp;      
       
       
-									<a href="./BoardDetailAction.bo?num=${list.NUM}">
-										${list.SUBJECT}</a>
+									<a href="./BoardDetailAction.bo?num=${list.num}">
+										${list.subject}</a>
 								</div>
 							</td>
 
 							<td width="14%"><div>${list.id }</div></td>
-							<td width="17%"><div>${list.inputDATE}</div></td>
-							<td width="11%"><div>${list.READCOUNT}</div></td>
+							<td width="17%"><div>${list.inputdate}</div></td>
+							<td width="11%"><div>${list.readcount}</div></td>
 						</tr>
 					</c:forEach>
 
@@ -86,7 +86,7 @@
 							</c:if>
 							<c:if test="${page > 1 }">
 								<li class="page-item"><a
-									href="./BoardList.bo?page=${page-1}" class="page-link">이전&nbsp;</a></li>
+									href="./BoardGroupList.bo?page=${page-1}" class="page-link">이전&nbsp;</a></li>
 							</c:if>
 
 							<%--숫자 나온는것 처리 --%>
@@ -98,7 +98,7 @@
 								</c:if>
 
 								<c:if test="${a!=page}">
-									<li class="page-item"><a href="./BoardList.bo?page=${a }"
+									<li class="page-item"><a href="./BoardGroupList.bo?page=${a }"
 										class="page-link gray">${a }</a></li>
 								</c:if>
 							</c:forEach>
@@ -108,7 +108,7 @@
 							</c:if>
 							<c:if test="${page < maxpage}">
 								<li class="page-item"><a
-									href="./BoardList.bo?page=${page+1}" class="page-link ">&nbsp;다음</a>
+									href="./BoardGroupList.bo?page=${page+1}" class="page-link ">&nbsp;다음</a>
 								</li>
 							</c:if>
 

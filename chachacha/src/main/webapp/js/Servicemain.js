@@ -49,17 +49,17 @@ $.ajax({
                         blank += '&nbsp;&nbsp';
                      }
                      img="";
-                     if(item.board_RE_LEV >0){
-                        img = "<img src='image/AnswerLine.gif'>";
-                     }
+//                     if(item.board_RE_LEV >0){
+//                        img = "<img src='image/AnswerLine.gif'>";
+//                     }
                      output += "<td><div>" + blank + img
                      output += ' <a href="BoardDetailAction.bo?num='
-                        +item.NUM + '&page='
+                        +item.num + '&page='
                         +data.page + '">'
-                     output += item.SUBJECT +'</a></div></td>'
+                     output += item.subject +'</a></div></td>'
                      output += '<td><div>' + item.id+'</div></td>'
-                     output += '<td><div>' + item.InputDATE+'</div></td>'
-                     output += '<td><div>' + item.READCOUNT+'</div></td>'
+                     output += '<td><div>' + item.inputdate+'</div></td>'
+                     output += '<td><div>' + item.readcount+'</div></td>'
                               +   '</div></td></tr>'
                         
                      

@@ -40,9 +40,15 @@ public class BoardController {
 	private CommentService commentService;
 
 
+
 	// 글 목록보기
 	@RequestMapping(value = "/BoardList.bo")
 	public ModelAndView boardList(@RequestParam(value = "page", defaultValue = "1") int page, ModelAndView mv)
+
+	// 구매 게시판 보기
+	@RequestMapping(value = "/BoardBuyList.bo")
+	public ModelAndView boardbuyList(@RequestParam(value = "page", defaultValue = "1") int page, ModelAndView mv)
+
 			throws Exception {
 		
 		String category = "b";
@@ -71,11 +77,48 @@ public class BoardController {
 		mv.addObject("maxpage", maxpage);
 		mv.addObject("listcount", listcount);
 		mv.addObject("boardlist", boardlist);
-		mv.setViewName("board/board_list");
+		mv.setViewName("board/board_buy");
 
 		return mv;
 
 	}
+	
+	// 판매 게시판 보기
+		@RequestMapping(value = "/BoardSaleList.bo")
+		public ModelAndView boardsaleList(@RequestParam(value = "page", defaultValue = "1") int page, ModelAndView mv)
+				throws Exception {
+			
+			String category = "s";
+
+			int limit = 10; // 한 화면에 출력할 레코드 갯수
+			int listcount = boardService.getListCount(); // 총 리스트 수를 받아옴
+
+			// 총 페이지 수
+			int maxpage = (listcount + limit - 1) / limit;
+
+			// 현재 페이지에 보여줄 시작 페이지 수 (1, 11, 21 등 ...)
+			int startpage = ((page - 1) / 10) * 10 + 1;
+
+			// 현재 페이지에서 보여줄 마지막 페이지 수 (10, 20, 30 등 ...)
+			int endpage = startpage + 10 - 1;
+
+			if (endpage > maxpage)
+				endpage = maxpage;
+
+			List<Board> boardlist = boardService.getBoardList(page, limit, category);
+
+			mv.addObject("page", page);
+			mv.addObject("limit", limit);
+			mv.addObject("startpage", startpage);
+			mv.addObject("endpage", endpage);
+			mv.addObject("maxpage", maxpage);
+			mv.addObject("listcount", listcount);
+			mv.addObject("boardlist", boardlist);
+			mv.setViewName("board/board_sale");
+
+			return mv;
+
+		}
 
 	// 글 목록보기 Ajax 이용
 	@ResponseBody
@@ -118,6 +161,7 @@ public class BoardController {
 
 	}
 
+	//게시글 작성
 	@RequestMapping(value = "/BoardAddAction.bo")
 	public String write(Board board, HttpServletRequest request) throws Exception {
 
@@ -125,7 +169,7 @@ public class BoardController {
 
 		if (!uploadfile.isEmpty()) {
 			String fileName = uploadfile.getOriginalFilename(); // 원래 파일명
-			board.setFILEname(fileName); // 원래 파일명 저장
+			board.setFilename(fileName); // 원래 파일명 저장
 
 			// 새로운 폴더 이름 : 오늘 년+월+일
 			Calendar c = Calendar.getInstance();
@@ -169,13 +213,13 @@ public class BoardController {
 			uploadfile.transferTo(new File(saveFolder + fileDBName));
 
 			// 바뀐 파일명으로 저장
-			board.setFILEname(fileDBName);
+			board.setFilename(fileDBName);
 
 		}
 
 		boardService.insertBoard(board); // 저장 메소드 호출
 
-		return "redirect:BoardList.bo";
+		return "redirect:BoardBuyList.bo";
 	}
 
 	@RequestMapping(value = "/BoardWrite.bo")
@@ -224,7 +268,7 @@ public class BoardController {
 	public ModelAndView BoardModifyAction(Board board, String check, ModelAndView mv, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 
-		boolean usercheck = boardService.isBoardWriter(board.getNUM(), board.getPassword());
+		boolean usercheck = boardService.isBoardWriter(board.getNum(), board.getPassword());
 
 		// 비밀번호가 다를 경우
 		if (usercheck == false) {
@@ -247,11 +291,11 @@ public class BoardController {
 
 			System.out.println("기존파일 그대로 사용합니다.");
 			String fileDBName = fileDBName(check, saveFolder);
-			board.setFILEname(fileDBName);
+			board.setFilename(fileDBName);
 		} else {
 			if (!uploadfile.isEmpty()) { // 파일 변경한 경우
 				String fileName = uploadfile.getOriginalFilename(); // 원래 파일명
-				board.setFILEname(fileName);
+				board.setFilename(fileName);
 
 				String fileDBName = fileDBName(fileName, saveFolder);
 
@@ -259,13 +303,13 @@ public class BoardController {
 				uploadfile.transferTo(new File(saveFolder + fileDBName));
 
 				// 바뀐 파일명으로 저장
-				board.setFILEname(fileDBName);
+				board.setFilename(fileDBName);
 			} else { // uploadfile.isEmpty() 인경우 - 파일 선택하지 않은 경우
 				System.out.println("uploadfile.isEmpty()");
 				// <input type="hidden" name="BOARD_ORIGINAL"
 				// value="${boarddata.BOARD_ORIGINAL}>
 				// 위 태그에 값이 있다면 ""로 값을 변경합니다.
-				board.setFILEname("");
+				board.setFilename("");
 			}
 		}
 
@@ -280,7 +324,7 @@ public class BoardController {
 			mv.addObject("message", "게시판 수정 실패");
 		} else { // 수정 성공의 경우
 			System.out.println("게시판 수정 완료");
-			String url = "redirect:BoardDetailAction.bo?num=" + board.getNUM();
+			String url = "redirect:BoardDetailAction.bo?num=" + board.getNum();
 
 			// 수정한 글 내용을 보여주기 위해 글 내용 보기 페이지로 이동하기위해 경로를 설정합니다.
 			mv.setViewName(url);
