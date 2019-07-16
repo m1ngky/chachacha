@@ -1,21 +1,32 @@
 CREATE TABLE PRODUCT(
-P_CODE VARCHAR2(20) PRIMARY KEY,
-P_COUNT NUMBER,
-P_PRICE NUMBER	UNIQUE,
-P_GPRICE NUMBER	UNIQUE,
-P_LIMIT NUMBER	NOT NULL,
-P_NAME	VARCHAR2(100) UNIQUE, --Ï†úÎ™©
-P_SELLERNAME	VARCHAR2(30) NOT NULL
+
+
+P_CODE NUMBER PRIMARY KEY,	--ªÛ«∞ π¯»£
+P_CATEGORY VARCHAR2(10) CHECK (P_CATEGORY IN('A','B','C','D')),	--ªÛ«∞ ƒ´≈◊∞Ì∏Æ
+P_PRICE NUMBER	DEFAULT 0 UNIQUE,	--ªÛ«∞ ¡§∞°
+P_GPRICE NUMBER	DEFAULT 0 UNIQUE,	--ªÛ«∞ «“¿Œ∞°
+P_LIMIT NUMBER	,		--ªÛ«∞ ±∏∏≈¡¶«—
+P_NAME	VARCHAR2(100) UNIQUE,	--ªÛ«∞¿Ã∏ß
+P_SELLERNAME	VARCHAR2(30) ,	--∆«∏≈¿⁄¿Ã∏ß
+P_IMAGE VARCHAR2(50) UNIQUE		--ªÛ«∞ ¿ÃπÃ¡ˆ
 
 )
 
-alter table product
-add P_COUNT NUMBER
+DROP TABLE PRODUCT
 
-DROP TABLE PRODUCT 
+
 SELECT * FROM PRODUCT
 
+delete from product where p_code = 1
 
+insert into product values(1,'A',10000,5000,10,'º±«≥±‚','√÷«ˆ¿Á','wade.jpg');
+insert into product values(2,'A',15000,10000,10,'ø°æÓƒ¡','√÷«ˆ¿Á','giannis.jpg');
+insert into product values(3,'A',20000,15000,10,'∏Èµµ±‚','√÷«ˆ¿Á','james.jpg');
+insert into product values(4,'A',25000,20000,10,'¥Ÿ∏ÆπÃ','√÷«ˆ¿Á','zion.jpg');
+insert into product values(5,'A',30000,25000,10,'¿¸¿⁄∑π¿Œ¡ˆ','√÷«ˆ¿Á','durant.jpg');
+insert into product values(6,'A',35000,30000,10,'≥√¿Â∞Ì','√÷«ˆ¿Á','brooks.jpg');
+insert into product values(7,'A',40000,35000,10,'ƒƒ«ª≈Õ','√÷«ˆ¿Á','curry.jpg');
+insert into product values(8,'A',45000,40000,10,'æ∆¿Ã∆˘','√÷«ˆ¿Á','leonard.jpg');
 
 
 
