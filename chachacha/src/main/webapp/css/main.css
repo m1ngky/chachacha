@@ -770,7 +770,15 @@ nav#menu #menu-nav li a:hover {
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
-
+/*
+	상품 카테고리 네비게이션 바
+*/
+.product {
+	height:50px;
+}
+.navbar-nav li{
+	padding-left:100px;
+}
 
 /* ==================================================
    About Section
