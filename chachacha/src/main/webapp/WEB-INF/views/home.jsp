@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
+
 <meta charset="UTF-8">
 <meta name="description" content="Insert Your Site Description" />
 
@@ -14,9 +14,9 @@
 
 <title>Insert title here</title>
 
-=======
+
 <link href="css/bootstrap.min.css" rel="stylesheet">
->>>>>>> refs/remotes/origin/master
+
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Main Style -->
