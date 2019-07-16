@@ -15,7 +15,6 @@
 <title>Insert title here</title>
 
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 

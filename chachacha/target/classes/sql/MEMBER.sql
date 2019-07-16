@@ -2,6 +2,8 @@ DROP TABLE FMEMBER
 
 SELECT * FROM FMEMBER
 
+delete FMEMBER
+
 CREATE TABLE FMEMBER(
    id         VARCHAR2(15),
    password   VARCHAR2(10),
@@ -14,7 +16,12 @@ CREATE TABLE FMEMBER(
    phonenumber VARCHAR2(15),
    joindate VARCHAR2(10),
    mileage NUMBER(10),
-   account VARCHAR(50),
-   PRIMARY KEY(ID)
+
+   account VARCHAR(30),
+   PRIMARY KEY(id)
+
 );
+
+insert into fmember(id, password) values('meoun12', '1234');
+
 

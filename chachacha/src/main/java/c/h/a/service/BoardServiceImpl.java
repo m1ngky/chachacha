@@ -5,12 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.TransactionDefinition;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import c.h.a.dao.BoardDAO;
 import c.h.a.domain.Board;
@@ -21,8 +16,8 @@ public class BoardServiceImpl implements BoardService{
 	@Autowired
 	private BoardDAO dao;
 	
-	@Autowired
-	private DataSourceTransactionManager transaction;
+//	@Autowired
+//	private DataSourceTransactionManager transaction;
 
 	@Override
 	public int getListCount() {
@@ -31,7 +26,7 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public List<Board> getBoardList(int page, int limit) {
+	public List<Board> getBoardList(int page, int limit, String category) {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		
 		int startrow = (page - 1) * limit + 1;	//읽기 시작할 row 번호
@@ -55,29 +50,29 @@ public class BoardServiceImpl implements BoardService{
 		return dao.getDetail(num);
 	}
 
-	@Transactional
-	@Override
-	public int boardReply(Board board) {
-		DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-		
-		//PROPAGATION_REQUIRED : 활성화된 트랜잭션이 존재한다면 스프링은
-		//이 트랜잭션을 사용하고 그렇지 않으면 새로운 트랜잭션을 시작한다.
-		def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
-		TransactionStatus status = transaction.getTransaction(def);
-		try {
-			dao.boardReplyUpdate(board);
-			board.setBOARD_RE_LEV(board.getBOARD_RE_LEV() + 1);
-			board.setBOARD_RE_SEQ(board.getBOARD_RE_SEQ() + 1);
-			dao.boardReply(board);
-			transaction.commit(status);
-			return 1;
-		} catch (Exception e) {
-			System.out.println("rollback 합니다.");
-			transaction.rollback(status);
-			return 0;
-		}
-		
-	}
+//	@Transactional
+//	@Override
+//	public int boardReply(Board board) {
+//		DefaultTransactionDefinition def = new DefaultTransactionDefinition();
+//		
+//		//PROPAGATION_REQUIRED : 활성화된 트랜잭션이 존재한다면 스프링은
+//		//이 트랜잭션을 사용하고 그렇지 않으면 새로운 트랜잭션을 시작한다.
+//		def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
+//		TransactionStatus status = transaction.getTransaction(def);
+//		try {
+//			dao.boardReplyUpdate(board);
+//			board.setBOARD_RE_LEV(board.getBOARD_RE_LEV() + 1);
+//			board.setBOARD_RE_SEQ(board.getBOARD_RE_SEQ() + 1);
+//			dao.boardReply(board);
+//			transaction.commit(status);
+//			return 1;
+//		} catch (Exception e) {
+//			System.out.println("rollback 합니다.");
+//			transaction.rollback(status);
+//			return 0;
+//		}
+//		
+//	}
 
 	@Override
 	public int boardModify(Board modifyboard) {
@@ -116,11 +111,11 @@ public class BoardServiceImpl implements BoardService{
 		
 	}
 
-	@Override
-	public void boardDeleteall(int num) {
-		
-		dao.boardDeleteall(num);
-		
-	}
+//	@Override
+//	public void boardDeleteall(int num) {
+//		
+//		dao.boardDeleteall(num);
+//		
+//	}
 
 }

@@ -8,7 +8,7 @@ public interface BoardService {
 
 	int getListCount();
 
-	List<Board> getBoardList(int page, int limit);
+	List<Board> getBoardList(int page, int limit, String category);
 
 	int insertBoard(Board board);
 	
@@ -16,7 +16,7 @@ public interface BoardService {
 	public Board getDetail(int num);
 	
 	//글 답변
-	public int boardReply(Board board);
+//	public int boardReply(Board board);
 	
 	//글 수정
 	public int boardModify(Board modifyboard);
@@ -30,8 +30,8 @@ public interface BoardService {
 	//글 수정 Action
 	public int boardModifyAction(int num);
 
-	boolean isBoardWriter(int board_NUM, String board_PASS);
+	boolean isBoardWriter(int NUM, String password);
 
-	void boardDeleteall(int num);
+//	void boardDeleteall(int num);
 	
 }

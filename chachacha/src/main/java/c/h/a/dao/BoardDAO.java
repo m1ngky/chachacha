@@ -74,10 +74,4 @@ public class BoardDAO {
 		
 	}
 
-	public void boardDeleteall(int num) {
-		
-		sqlSession.delete("Boards.deleteall", num);
-		
-	}
-
 }

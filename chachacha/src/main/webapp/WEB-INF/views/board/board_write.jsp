@@ -4,9 +4,10 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-		<title>MVC 게시판</title>
+		<title>게시판</title>
 		<jsp:include page="header.jsp" />
-		<script src="resources/js/writeform.js" charset="UTF-8"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="js/writeform.js" charset="UTF-8"></script>
 		<style>
 			tr.center-block {
 				text-align : center;
@@ -38,27 +39,27 @@
 <body>
 	<div class="container">
 		<form action="BoardAddAction.bo" method="post" enctype="multipart/form-data" name="boardform">
-			<h1>MVC 게시판-write 페이지</h1>
+			<h1>게시판 글쓰기 페이지</h1>
 			<div class="form-group">
-				<label for="board_name">글쓴이</label>
-				<input name="BOARD_NAME" id="board_name" value="${id}" readOnly type="text" size="10" maxlength="30" 
-						class="form-control" placeholder="Enter board_name">
+				<label for="id">글쓴이</label>
+				<input name="id" id="id" value="${id}" readOnly type="text" size="10" maxlength="30" 
+						class="form-control" placeholder="Enter name">
 			</div>
 			<div class="form-group">
-				<label for="board_pass">비밀번호</label>
-				<input name="BOARD_PASS" id="board_pass" type="password" size="10" maxlength="30"
-						class="form-control" placeholder="Enter board_pass" autofocus>
+				<label for="password">비밀번호</label>
+				<input name="password" id="password" type="password" size="10" maxlength="30"
+						class="form-control" placeholder="Enter password" autofocus>
 			</div>
 			<div class="form-group">
-				<label for="board_subject">제목</label>
-				<input name="BOARD_SUBJECT" id="board_subject" type="text" class="form-control" placeholder="Enter board_subject">
+				<label for="subject">제목</label>
+				<input name="SUBJECT" id="SUBJECT" type="text" class="form-control" placeholder="Enter subject">
 			</div>
 			<div class="form-group">
-				<label for="board_content">내용</label>
-				<textarea name="BOARD_CONTENT" id="board_content" cols="67" rows="10" class="form-control"></textarea>
+				<label for="content">내용</label>
+				<textarea name="CONTENT" id="CONTENT" cols="67" rows="10" class="form-control"></textarea>
 			</div>
 			<div class="form-group">
-				<label for="board_file">파일 첨부</label>
+				<label for="file">파일 첨부</label>
 				<label for="upfile">
 					<img src="image/attach.png" alt="사막">
 				</label>
