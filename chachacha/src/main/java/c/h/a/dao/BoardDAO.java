@@ -15,63 +15,25 @@ public class BoardDAO {
 	
 	@Autowired
 	private SqlSessionTemplate sqlSession;
+ 
+	
 
-	public int getListCount() {
-		
-		return sqlSession.selectOne("Boards.count");
+	public int getServiceListCount(String category) { 
+		return sqlSession.selectOne("Boards.getServiceListCount", category);
 	}
 
-	public List<Board> getBoardList(HashMap<String, Integer> map) {
-		
-		return sqlSession.selectList("Boards.boardList", map);
+
+
+	public List<Board> getServiceBoardList(Map<String, Object> map) {
+		return sqlSession.selectList("Boards.getServiceboardList",map);
 	}
 
-	public int insertBoard(Board board) {
-		
+
+
+
+	public int Boardinsert(Board board) {
 		return sqlSession.insert("Boards.insert", board);
-		
 	}
 
-	public Board getDetail(int num) {
-		
-		return sqlSession.selectOne("Boards.detail", num);
-	}
-
-	public int boardModify(Board modifyboard) {
-		
-		return sqlSession.update("Boards.modify", modifyboard);
-	}
-
-	public void setReadCountUpdate(int num) {
-		
-		sqlSession.selectOne("Boards.ReadCountUpdate", num);
-		
-	}
-
-	public int boardModifyAction(int num) {
-		
-		return sqlSession.update("Boards.modify", num);
-	}
-
-	public Board isBoardWriter(Map<String, Object> map) {
-		
-		return sqlSession.selectOne("Boards.BoardWriter", map);
-	}
-
-	public int boardDelete(int num) {
-		
-		return sqlSession.delete("Boards.BoardDelete", num);
-	}
-
-	public int boardReply(Board board) {
-		
-		return sqlSession.insert("Boards.Reply", board);
-	}
-
-	public void boardReplyUpdate(Board board) {
-		
-		sqlSession.update("Boards.ReplyUpdate", board);
-		
-	}
 
 }

@@ -6,32 +6,40 @@ import c.h.a.domain.Board;
 
 public interface BoardService {
 
+
 	int getListCount();
 
 	List<Board> getBoardList(int page, int limit, String category);
 
 	int insertBoard(Board board);
 	
-	//±Û ³»¿ë º¸±â
+	//Â±Ã› Â³Â»Â¿Ã« ÂºÂ¸Â±Ã¢
 	public Board getDetail(int num);
 	
-	//±Û ´äº¯
+	//Â±Ã› Â´Ã¤ÂºÂ¯
 //	public int boardReply(Board board);
 	
-	//±Û ¼öÁ¤
+	//Â±Ã› Â¼Ã¶ÃÂ¤
 	public int boardModify(Board modifyboard);
 	
-	//±Û »èÁ¦
+	//Â±Ã› Â»Ã¨ÃÂ¦
 	public int boardDelete(int num);
 	
-	//Á¶È¸¼ö ¾÷µ¥ÀÌÆ®
+	//ÃÂ¶ÃˆÂ¸Â¼Ã¶ Â¾Ã·ÂµÂ¥Ã€ÃŒÃ†Â®
 	public void setReadCountUpdate(int num);
 
-	//±Û ¼öÁ¤ Action
-	public int boardModifyAction(int num);
+	
+
+
+	int getServiceListCount(String category);
+
 
 	boolean isBoardWriter(int NUM, String password);
 
 //	void boardDeleteall(int num);
-	
+
+
+
+
+
 }

@@ -3,11 +3,18 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
 <mapper namespace="Boards">
+
 	<select id="count" resultType="int">
 		select count(*) from fboard
 	</select>
+
+
+	<select id="getServiceListCount" resultType="int" parameterType="String">
+		select count(*) from fboard where category = #{category}
+	</select> 
+
 	
-	<select id="boardList" parameterType="Map" resultType="board">
+	<select id="getServiceboardList" parameterType="Map" resultType="board">
 		select * from( select rownum rnum, b.*
 		from(select *
 		from fboard
@@ -90,4 +97,30 @@
 		delete from fboard where Num=#{number}
 	</delete>
 	
+									 from(select * 
+									      from fboard 
+									      where category=#{category}) b
+									      )  
+									 where rnum &gt;=#{startrow} and rnum &lt;=#{endrow}
+	</select>
+	
+	<insert id="insert" parameterType="board">
+		<selectKey resultType="int" order="BEFORE"
+					keyColumn="num"  keyProperty="num">
+			select nvl(max(num),0)+1 from fboard
+		</selectKey>
+		insert into board
+		(NUM,
+		 NAME, category,ccategory,readcount,SUBJECT,
+		 CONTENT, filename,file_original,
+		 inputdate) 
+		 values(
+		 #{NUM},#{NAME}, #{category},#{ccategory},#{readcount}, #{SUBJECT},
+		 #{CONTENT}, #{filename, jdbcType=VARCHAR}, 
+		#{file_original, jdbcType=VARCHAR},
+		 sysdate)
+	
+	</insert>
+	
+
 </mapper>

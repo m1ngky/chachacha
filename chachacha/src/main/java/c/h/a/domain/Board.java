@@ -3,6 +3,7 @@ package c.h.a.domain;
 import org.springframework.web.multipart.MultipartFile;
 
 public class Board {
+
 	
 	private int NUM;				//글 번호
 	private String id;				//작성자
@@ -95,18 +96,7 @@ public class Board {
 	public void setOriginalFile(String originalFile) {
 		OriginalFile = originalFile;
 	}
-	public MultipartFile getUploadfile() {
-		return uploadfile;
-	}
-	public void setUploadfile(MultipartFile uploadfile) {
-		this.uploadfile = uploadfile;
-	}
-	public String getInputDATE() {
-		return InputDATE;
-	}
-	public void setInputDATE(String inputDATE) {
-		InputDATE = inputDATE;
-	}
+
 
 	
 	

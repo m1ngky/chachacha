@@ -20,12 +20,12 @@ public class BoardServiceImpl implements BoardService{
 //	private DataSourceTransactionManager transaction;
 
 	@Override
-	public int getListCount() {
-		
-		return dao.getListCount();
+	public int getServiceListCount(String category) {
+		return  dao.getServiceListCount(category);
 	}
 
 	@Override
+
 	public List<Board> getBoardList(int page, int limit, String category) {
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		
@@ -35,10 +35,22 @@ public class BoardServiceImpl implements BoardService{
 		map.put("startrow", startrow);
 		map.put("endrow", endrow);
 		return dao.getBoardList(map);
+
+	public List<Board> getServiceboardList(int page, int limit, String category) {
+		 Map<String,Object> map = new HashMap<String, Object>();
+	      int startrow = (page - 1) * limit + 1;  //읽기 시작할 row 번호(1 11 21 31 ...
+	      int endrow = startrow + limit - 1; 	  // 읽을 마지막 row 번호(10 20 30 40 ...
+	      
+	      map.put("startrow", startrow);
+	      map.put("endrow", endrow);
+	      map.put("category", category);
+	      return dao.getServiceBoardList(map);
+
 	}
 
 	@Override
 	public int insertBoard(Board board) {
+
 		int result = dao.insertBoard(board);
 		return result;
 		
@@ -117,5 +129,9 @@ public class BoardServiceImpl implements BoardService{
 //		dao.boardDeleteall(num);
 //		
 //	}
+
+		return dao.Boardinsert(board);
+	}
+
 
 }
