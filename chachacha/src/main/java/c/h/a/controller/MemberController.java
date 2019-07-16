@@ -32,6 +32,13 @@ public class MemberController {
 		System.out.println("joinform");
 		return "member/joinform";
 	}
+	
+	@RequestMapping(value = "/logout.net")
+	public String logout() {
+		System.out.println("logout");
+		return "member/logout";
+	}
+
 
 	
 	@RequestMapping(value = "/joinProcess.net")
@@ -42,12 +49,11 @@ public class MemberController {
 		PrintWriter out = response.getWriter();
 		out.println("<script>");
 		if (result == 1) {
-
-			out.println("alert('회원가입을 축하합니다.')");
+			out.println("alert('회원가입을 축하드립니다.')");
 			out.println("location.href='login.net';");
 
 		} else if (result == -1) {
-			out.println("alert('회원가입 실패')");
+			out.println("alert('아이디가 중복되었습니다. 다시 확인해주세요.')");
 			out.println("history.back()");
 
 		}
@@ -63,6 +69,30 @@ public class MemberController {
 		out.print(result);
 
 	}
+	
+	@RequestMapping(value = "/emailcheck.net", method = RequestMethod.GET)
+	public void emailcheck(@RequestParam(value = "email") String email, HttpServletResponse response) throws Exception {
+		System.out.println("emailcheck");
+		int result = memberservice.isEmail(email);
+		response.setContentType("text/html; charset=utf-8");
+		PrintWriter out = response.getWriter();
+		out.print(result);
+
+	}
+	
+	
+	
+	@RequestMapping(value = "/nicknamecheck.net", method = RequestMethod.GET)
+	public void nicknamecheck(@RequestParam(value = "nickname") String nickname, HttpServletResponse response) throws Exception {
+		System.out.println("nicknamecheck");
+		int result = memberservice.isNickname(nickname);
+		response.setContentType("text/html; charset=utf-8");
+		PrintWriter out = response.getWriter();
+		out.print(result);
+
+	}
+	
+	
 
 	@RequestMapping(value = "/loginProcess.net")
 	public String loginProcess(@RequestParam(value = "id") String id, @RequestParam(value = "password") String password,
@@ -79,9 +109,9 @@ public class MemberController {
 		} else {
 			String message = "";
 			if (result == -1)
-				message = "로그인 실패";
+				message = "아이디를 확인해주세요";
 			else
-				message = "로그인 실패";
+				message = "비밀번호를 확인해주세요";
 			out.println("<script>");
 			out.println("alert('" + message + "');");
 			out.println("history.back();");

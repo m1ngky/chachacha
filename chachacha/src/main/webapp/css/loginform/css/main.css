@@ -506,6 +506,8 @@ input.input100 {
   opacity: 1;
 }
 
+
+
 @media (max-width: 992px) {
   .alert-validate::before {
     visibility: visible;

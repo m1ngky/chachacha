@@ -15,9 +15,17 @@ public class MemberDAO {
 	public Member isid(String id) {
 		return sqlSession.selectOne("Members.idcheck", id);
 	}
+	
+	public Member isemail(String email) {
+		return sqlSession.selectOne("Members.emailcheck", email);
+	}
 
 	public int insert(Member m) {
 		return sqlSession.insert("Members.insert", m);
+	}
+
+	public Member isnickname(String nickname) {
+		return sqlSession.selectOne("Members.nicknamecheck", nickname);
 	}
 
 }

@@ -19,6 +19,12 @@ public class MemberServiceImpl implements MemberService{
 		Member rmember = dao.isid(id);
 		return (rmember==null)? -1 :1 ; 
 	}
+	
+	@Override
+	public int isEmail(String email) {
+		Member rmember = dao.isemail(email);
+		return (rmember==null)? -1 :1 ; 
+	}
 
 	@Override
 	public int isId(String id, String password) {
@@ -70,4 +76,11 @@ public class MemberServiceImpl implements MemberService{
 		return 0;
 	}
 
+	@Override
+	public int isNickname(String nickname) {
+		Member rmember = dao.isnickname(nickname);
+		return (rmember==null)? -1 :1 ; 
+	}
+
 }
+
