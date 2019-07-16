@@ -23,7 +23,7 @@ public class BoardDAO {
 
 	public List<Board> getBoardList(HashMap<String, Integer> map) {
 		
-		return sqlSession.selectList("Boards.boardList", map);
+		return sqlSession.selectList("Boards.boardlist", map);
 	}
 
 	public int insertBoard(Board board) {
@@ -44,7 +44,7 @@ public class BoardDAO {
 
 	public void setReadCountUpdate(int num) {
 		
-		sqlSession.selectOne("Boards.ReadCountUpdate", num);
+		sqlSession.selectOne("Boards.readcountupdate", num);
 		
 	}
 
@@ -55,22 +55,22 @@ public class BoardDAO {
 
 	public Board isBoardWriter(Map<String, Object> map) {
 		
-		return sqlSession.selectOne("Boards.BoardWriter", map);
+		return sqlSession.selectOne("Boards.boardwriter", map);
 	}
 
 	public int boardDelete(int num) {
 		
-		return sqlSession.delete("Boards.BoardDelete", num);
+		return sqlSession.delete("Boards.boarddelete", num);
 	}
 
 	public int boardReply(Board board) {
 		
-		return sqlSession.insert("Boards.Reply", board);
+		return sqlSession.insert("Boards.reply", board);
 	}
 
 	public void boardReplyUpdate(Board board) {
 		
-		sqlSession.update("Boards.ReplyUpdate", board);
+		sqlSession.update("Boards.replyupdate", board);
 		
 	}
 

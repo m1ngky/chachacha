@@ -52,11 +52,11 @@
 			</div>
 			<div class="form-group">
 				<label for="subject">제목</label>
-				<input name="SUBJECT" id="SUBJECT" type="text" class="form-control" placeholder="Enter subject">
+				<input name="subject" id="subject" type="text" class="form-control" placeholder="Enter subject">
 			</div>
 			<div class="form-group">
 				<label for="content">내용</label>
-				<textarea name="CONTENT" id="CONTENT" cols="67" rows="10" class="form-control"></textarea>
+				<textarea name="content" id="content" cols="67" rows="10" class="form-control"></textarea>
 			</div>
 			<div class="form-group">
 				<label for="file">파일 첨부</label>

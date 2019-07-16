@@ -7,79 +7,79 @@
 		select count(*) from fboard
 	</select>
 	
-	<select id="boardList" parameterType="Map" resultType="board">
+	<select id="boardlist" parameterType="map" resultType="board">
 		select * from( select rownum rnum, b.*
 		from(select *
 		from fboard
-		order by NUM desc) b
+		order by num desc) b
 		)
 		where rnum &gt;=#{startrow} and rnum &lt;=#{endrow}
 	</select>
 	
 	<insert id="insert" parameterType="board">
-		<selectKey resultType="int" order="BEFORE" keyColumn="NUM" keyProperty="NUM">
-			select nvl(max(NUM),0)+1 from fboard
+		<selectKey resultType="int" order="BEFORE" keyColumn="num" keyProperty="num">
+			select nvl(max(num),0)+1 from fboard
 		</selectKey>
 		
 		insert into fboard
-		(NUM,
-		 id, password, SUBJECT,
-		 CONTENT, FILEname, OriginalFile,
-		 READCOUNT,
-		 InputDATE
+		(num,
+		 id, password, subject,
+		 content, filename, originalfile,
+		 readcount,
+		 inputdate
 		) values
-		(#{NUM},
-		 #{id}, #{password}, #{SUBJECT},
-		 #{CONTENT}, #{FILEname, jdbcType=VARCHAR}, #{OriginalFile, jdbcType=VARCHAR},
-		 #{READCOUNT},
+		(#{num},
+		 #{id}, #{password}, #{subject},
+		 #{content}, #{filename, jdbcType=VARCHAR}, #{originalfile, jdbcType=VARCHAR},
+		 #{readcount},
 		 sysdate
 		)
 		
 	</insert>
 	
 	<select id="detail" parameterType="int" resultType="board">
-		select * from fboard where NUM = #{number}
+		select * from fboard where num = #{number}
 	</select>
 	
-	<update id="ReadCountUpdate" parameterType="int">
+	<update id="readcountupdate" parameterType="int">
 		update fboard 
-		set READCOUNT = 
-		READCOUNT+1 where NUM = #{number}
+		set readcount = 
+		readcount+1 where num = #{number}
 	</update>
 	
-	<select id="BoardWriter" parameterType="map" resultType="board">
-		select * from fboard where NUM = #{num} and password = #{password}
+	<select id="boardwriter" parameterType="map" resultType="board">
+		select * from fboard where num = #{num} and password = #{password}
 	</select>
 	
 	<update id="modify" parameterType="board">
 		update fboard
 		set
-		SUBJECT=#{SUBJECT},
-		CONTENT=#{CONTENT},
-		FILEname=#{FILEname, jdbcType=VARCHAR},
-		OriginalFile=#{OriginalFile, jdbcType=VARCHAR}
-		where NUM=#{NUM}
+		subject=#{subject},
+		content=#{content},
+		filename=#{filename, jdbcType=VARCHAR},
+		originalfile=#{originalfile, jdbcType=VARCHAR}
+		where num=#{num}
 	</update>
 	
-	<delete id="BoardDelete" parameterType="int" >
-		delete from fboard where NUM = #{NUM}
+	<delete id="boarddelete" parameterType="int" >
+		delete from fboard where num = #{num}
 	</delete>
 	
-	<insert id="Reply" parameterType="board">
-		<selectKey resultType="int" order="BEFORE" keyColumn="NUM" keyProperty="NUM">
-			select nvl(max(NUM),0)+1 from fboard
+	<insert id="reply" parameterType="board">
+		<selectKey resultType="int" order="BEFORE" keyColumn="num" keyProperty="num">
+			select nvl(max(num),0)+1 from fboard
 		</selectKey>
 		
 		insert into fboard
-		(NUM,
-		 id, password, SUBJECT,
-		 CONTENT,
+		(num,
+		 id, password, subject,
+		 content,
 		 readcount
-		 InputDATE
+		 inputdate
 		) values
-		(#{NUM},
-		 #{id}, #{password}, #{SUBJECT},
-		 #{CONTENT},
+		(#{num},
+		 #{id}, #{password}, #{subject},
+		 #{content},
 		 #{readcount},
 		 sysdate
 		)
@@ -87,7 +87,7 @@
 	</insert>
 	
 	<delete id="delete" parameterType="int">
-		delete from fboard where Num=#{number}
+		delete from fboard where num=#{number}
 	</delete>
 	
 </mapper>
