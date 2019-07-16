@@ -12,12 +12,14 @@
 	<!--  2. 장바구니 목록 -->
 	<select id="listCart" resultType="cart">
 		select
+			p.p_image,
 			c.c_no,	
 			c.c_id,
 			p.p_code,
 			p.p_name,
 			c.c_amount,
 			p.p_gprice,
+			p.p_category,
 			(p_gprice * c_amount) money
 		from
 			member m, product p, cart c
@@ -38,15 +40,15 @@
 	<!--  4. 장바구니 삭제 -->
 	<delete id="delete">
 		delete from cart
-		where cart_id = #{cartId}
+		where c_no = #{cartId}
 	</delete>
 	
 	<!--  5. 장바구니 수정 -->
 	<update id="modifyCart">
 		update cart
-		set amount = #{amount}
-		where user_id = #{userId}
-		and product_id = #{productId}
+		set c_amount = #{c_amount}
+		where c_id = #{c_id}
+		and p_code = #{p_code}
 	</update>
 	
 	<!--  6. 장바구니에 동일한 상품이 있는지 확인 -->

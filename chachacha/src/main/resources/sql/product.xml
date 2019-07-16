@@ -7,7 +7,7 @@
 	<select id="productList" resultType="product">
 		select
 			p_code,
-			P_category,
+			p_category,
 			p_price,
 			p_gprice,
 			p_limit,

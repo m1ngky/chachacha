@@ -14,7 +14,21 @@ public class Cart {
 	private int p_gprice;
 	private int c_amount;
 	private int money;
+	private String p_image;
+	private String p_category;
 	
+	public String getP_category() {
+		return p_category;
+	}
+	public void setP_category(String p_category) {
+		this.p_category = p_category;
+	}
+	public String getP_image() {
+		return p_image;
+	}
+	public void setP_image(String p_image) {
+		this.p_image = p_image;
+	}
 	public int getC_no() {
 		return c_no;
 	}

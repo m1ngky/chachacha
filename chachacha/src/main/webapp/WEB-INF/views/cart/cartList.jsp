@@ -11,13 +11,14 @@
 <title>상품 장바구니 목록</title>
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
-$(function(){
-	//상품목록 페이지로 이동
-	$("#productList").click(function(){
-		location.href = "productList.bo";
+	$(function(){
+		//상품목록 페이지로 이동
+		$("#productList").click(function(){
+			// 상품목록 누르면, 카테고리 고를수있게하거나 아니면  , 메인창? 아니면 없앨까 
+			location.href = "productList.bo?p_category=A";	
+		})
+		
 	})
-	
-})
 </script>
 </head>
 <body>
@@ -46,13 +47,14 @@ $(function(){
 				<c:forEach var="row" items="${map.list}">
 				<input type="hidden" id="cart_id" value="${row.c_no }" name="cartId">
 				<tr>
+					<td><img src="img/product/${row.p_image }" width="200px" height="100px"></td>
 					<td>${row.p_name}</td>
 					<td style="width:80px" align="right">
 						<fmt:formatNumber value="${row.p_gprice}" pattern="###,###,###"/>
 					</td>
 					<td>
-						<input type="number" id="amount" style="width:40px" name="amount" value="${row.c_amount}" min="1">
-						<input type="hidden" name="c_code" value="${row.p_code}">
+						<input type="number" id="c_amount" style="width:40px" name="c_amount" value="${row.c_amount}" min="1">
+						<input type="hidden" name="p_code" value="${row.p_code}">
 					</td>
 					<td style="width:100px" align="right">
 						<fmt:formatNumber value="${row.money}" pattern="###,###,###"/>
@@ -76,6 +78,7 @@ $(function(){
 		</c:otherwise>
 	</c:choose>
 </div>
+	<c:set var="row" ></c:set>
 	<button type="button" id="productList">상품목록</button>
 </body>
 </html>

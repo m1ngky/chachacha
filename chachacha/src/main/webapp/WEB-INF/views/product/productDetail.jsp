@@ -39,7 +39,7 @@
 				<td colspan="2">
 					<form name="addCart" method="post" action="addCart.bo">
 						<input type="hidden" name="p_code" value="${vo.p_code}">
-						<select name="amount">
+						<select name="c_amount">
 							<c:forEach begin="1" end="10" var="i">
 								<option value="${i}">${i}</option>
 							</c:forEach>

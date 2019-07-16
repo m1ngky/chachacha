@@ -79,16 +79,16 @@ public class CartController {
 	
 	// 4. 장바구니 수정
 	@RequestMapping(value="/CartUpdate.bo")
-	public String update(@RequestParam int[] amount,
-			@RequestParam int[] productId, HttpSession session) {
+	public String update(@RequestParam int[] c_amount,
+			@RequestParam int[] p_code, HttpSession session) {
 		
 		String userId = (String) session.getAttribute("id");
 		
-		for(int i=0;i<productId.length;i++) {
+		for(int i=0;i<p_code.length;i++) {
 			Cart cart = new Cart();
 			cart.setC_id(userId);
-			cart.setC_amount(amount[i]);
-			cart.setP_code(productId[i]);
+			cart.setC_amount(c_amount[i]);
+			cart.setP_code(p_code[i]);
 			cartService.modifyCart(cart);
 		}
 		
