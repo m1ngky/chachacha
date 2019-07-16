@@ -128,11 +128,11 @@
 						<span class="label-input100">Account</span><br><br>
 						 <select id="bankselect" class="form-control" name="bankselect" style="width:30%;height:27%;">
 						    <option value="">은행</option>
-                            <option value="농협은행  :  ">농협은행</option>
-                            <option value="신한은행  :  ">신한은행</option>
-                            <option value="기업은행  :  ">기업은행</option>
-                            <option value="우리은행  :  ">우리은행</option>
-                            <option value="국민은행  :  ">국민은행</option>
+                            <option value="농협은행  :   ">농협은행</option>
+                            <option value="신한은행  :   ">신한은행</option>
+                            <option value="기업은행  :   ">기업은행</option>
+                            <option value="우리은행  :   ">우리은행</option>
+                            <option value="국민은행  :   ">국민은행</option>
                         </select>
 						<input id="account" class="input100" type="text" name="account" placeholder="12345-67-890123">
 						<span class="focus-input100"></span>
