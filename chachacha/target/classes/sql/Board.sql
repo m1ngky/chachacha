@@ -15,7 +15,7 @@ create table Fboard(
    GPRICE    varchar2(20),            --공동구매 가격
    FILEname      VARCHAR2(400),        --첨부될 파일 명(가공)
    OriginalFile  VARCHAR2(50),         --첨부될 파일 명
-   InputDATE DATE,                  --글 작성 날짜 
+   InputDATE DATE,                   --글 작성 날짜 
    primary key(num),
    constraint fk_fboard_name foreign key(id) 
    references fmember(id) on delete cascade
