@@ -18,6 +18,7 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping="/css/**" location="/css/" />
 	<resources mapping="/img/**" location="/img/" />
+	<resources mapping="/image/**" location="/image/" />
 	<resources mapping="/js/**" location="/js/" />
 	<resources mapping="/php/**" location="/php/" />
 
@@ -26,7 +27,7 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	
+
 	<!-- Transaction Manager -->
 	<beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<beans:property name="dataSource" ref="dataSource" />
@@ -40,6 +41,7 @@
 		</tx:attributes>
 	</tx:advice>
 	
+
 	<context:component-scan base-package="c.h.a" />
 	
 	

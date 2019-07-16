@@ -16,7 +16,7 @@ public interface BoardService {
 	public Board getDetail(int num);
 	
 	//글 답변
-	public int boardReply(Board board);
+//	public int boardReply(Board board);
 	
 	//글 수정
 	public int boardModify(Board modifyboard);
@@ -32,6 +32,6 @@ public interface BoardService {
 
 	boolean isBoardWriter(int board_NUM, String board_PASS);
 
-	void boardDeleteall(int num);
+//	void boardDeleteall(int num);
 	
 }

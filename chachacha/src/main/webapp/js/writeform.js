@@ -4,9 +4,9 @@ $(document).ready(function() {
 	// 등록 버튼 클릭할 때 이벤트 부분
 	$("form").submit(function() {
 
-		if ($.trim($("#board_pass").val()) == "") {
+		if ($.trim($("#password").val()) == "") {
 			alert("비밀번호를 입력하세요");
-			$("#board_pass").focus();
+			$("#password").focus();
 			return false;
 		}
 
