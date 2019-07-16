@@ -11,7 +11,7 @@ public class Board {
 	private String ccategory;
 	private int readcount;
 	private String subject;
-	private String content; 
+	private String content;
 	private String price;
 	private String gprice;
 	private MultipartFile uploadfile;

@@ -12,6 +12,6 @@ public interface BoardService {
 
 	List<Board> getServiceboardList(int page, int limit, String category);
 
-	int insertBoard(Board board); 
+	int insertBoard(Board board);
 	
 }

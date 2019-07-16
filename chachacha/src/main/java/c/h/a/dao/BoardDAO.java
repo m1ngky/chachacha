@@ -18,7 +18,7 @@ public class BoardDAO {
  
 	
 
-	public int getServiceListCount(String category) {
+	public int getServiceListCount(String category) { 
 		return sqlSession.selectOne("Boards.getServiceListCount", category);
 	}
 
