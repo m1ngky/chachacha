@@ -15,4 +15,5 @@ public interface MemberService {
 	public List<Member> getList();
 	public int delete(String id);
 	public int isNickname(String nickname);
+	public List<Member> gradeList(String grade);
 }

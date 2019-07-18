@@ -1,5 +1,6 @@
 package c.h.a.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,26 +61,33 @@ public class MemberServiceImpl implements MemberService{
 
 	@Override
 	public List<Member> getList(int index, String search_word) {
-		// TODO Auto-generated method stub
-		return null;
+		String[] search_field = new String[] { "id", "name", "age", "gender" };
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("index", search_field[index]);
+		map.put("search_word", search_word);
+		List<Member> list = dao.getList(map);
+		return list;
 	}
 
 	@Override
 	public List<Member> getList() {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.getList();
 	}
 
 	@Override
 	public int delete(String id) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.delete(id);
 	}
 
 	@Override
 	public int isNickname(String nickname) {
 		Member rmember = dao.isnickname(nickname);
 		return (rmember==null)? -1 :1 ; 
+	}
+
+	@Override
+	public List<Member> gradeList(String grade) {
+		return dao.gradeList(grade);
 	}
 
 }

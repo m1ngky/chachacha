@@ -14,6 +14,7 @@ public class Member {
 	private String joindate;
 	private String mileage;
 	private String account;
+	private String grade;
 	public String getId() {
 		return id;
 	}
@@ -86,7 +87,13 @@ public class Member {
 	public void setAccount(String account) {
 		this.account = account;
 	}
-
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	
 	
 	
 
