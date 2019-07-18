@@ -13,7 +13,7 @@ public class HomeController {
 	public String home() {
 		
 		
-		System.out.println("homeÀÔ´Ï´Ù.");
+		System.out.println("homeì…ë‹ˆë‹¤.");
 		
 		return "home";
 	}
@@ -21,14 +21,14 @@ public class HomeController {
 	
 	@RequestMapping(value="/productcommit.cha")
 	public String productcommit() {
-		System.out.println("ÆÇ¸ÅÀÚ »óÇ°µî·Ï ÆäÀÌÁö");
+		System.out.println("íŒë§¤ì ìƒí’ˆ ë“±ë¡");
 		return "productcommit";
 		
 	}
 	
 	@RequestMapping(value="/board_list")
 	public String board_list() {
-		System.out.println("°Ô½ÃÆÇ¸®½ºÆ®");
+		System.out.println("boardë¦¬ìŠ¤íŠ¸ì…ë‹ˆë‹¤.");
 		return "board_list";
 	}
 	

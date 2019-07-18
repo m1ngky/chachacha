@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <jsp:include page="header.jsp" />
-<script src="resources/js/view.js" charset="UTF-8"></script>
-<title>MVC 게시판</title>
+<script src="js/view.js" charset="UTF-8"></script>
+<title>게시판</title>
 <script>
 	$(function() {
 		$('form').submit(function() {
@@ -39,7 +39,7 @@
 	<div class="container">
 		<table class="table table-striped">
 			<tr>
-				<th colspan="2">MVC 게시판-view페이지</th>
+				<th colspan="2">게시판-view페이지</th>
 			</tr>
 			<tr>
 				<td>

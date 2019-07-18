@@ -6,6 +6,8 @@
 	<typeAliases>
 
 		<typeAlias alias="member" type="c.h.a.domain.Member"/>
+
+		<typeAlias alias="product" type="c.h.a.domain.Products"/>
 		
 		
 
@@ -16,6 +18,7 @@
 	 <mappers>
 
 	     <mapper resource="sql/member.xml"/>
+	     <mapper resource="sql/Products.xml"/>
 
 	 	<mapper resource="sql/board.xml"/>
 

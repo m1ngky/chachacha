@@ -5,7 +5,7 @@
 <html>
 <head>
 <jsp:include page="header.jsp"/>
-<script src="resources/js/writeform.js" charset="UTF-8"></script>
+<script src="js/writeform.js" charset="UTF-8"></script>
 <style>
 	tr.center-block{text-align:center}
 	h1{font-size:1.5rem; text-align:center; color:#1a92b9}
@@ -20,7 +20,7 @@
 		<form action="BoardModifyAction.bo" method="post" name="Modifyform" enctype="multipart/form-data">
 			<input type="hidden" name="BOARD_NUM" value="${boarddata.BOARD_NUM}">
 			<input type="hidden" name="BOARD_ORIGINAL" value="${boarddata.BOARD_ORIGINAL }">
-			<h1>MVC 게시판-modify 페이지</h1>
+			<h1>게시판-수정 페이지</h1>
 			<div class="form-group">
 				<label for="board_name">글쓴이</label> 
 				<input name="BOARD_NAME" id="board_name" value="${id}" 

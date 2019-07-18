@@ -9,15 +9,28 @@
 <link href="css/mingky.css" rel="stylesheet">
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+$(function(){
+	$("#add").click(function(){
+		return "addproduct"
+	})
+	
+})
 
+</script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
 	rel="stylesheet">
-
+<style>
+#cart{
+background-color:#DE5E60;
+color:#fff;
+}
+</style>
 
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-
+	<form name = addproduct action="productlist.cha" method="get"></form>
 	<div class="container">
 		<div class="card">
 			<div class="container-fliud">
@@ -107,24 +120,11 @@
 								placeholder="상품수량을 입력해주세요." aria-label="상품수량을 입력해주세요."
 								aria-describedby="basic-addon1">
 						</div>
-						<p class="vote">
-							<strong>91%</strong> of buyers enjoyed this product! <strong>(87
-								votes)</strong>
-						</p>
-						<h5 class="sizes">
-							sizes: <span class="size" data-toggle="tooltip" title="small">s</span>
-							<span class="size" data-toggle="tooltip" title="medium">m</span>
-							<span class="size" data-toggle="tooltip" title="large">l</span> <span
-								class="size" data-toggle="tooltip" title="xtra large">xl</span>
-						</h5>
-						<h5 class="colors">
-							colors: <span class="color orange not-available"
-								data-toggle="tooltip" title="Not In store"></span> <span
-								class="color green"></span> <span class="color blue"></span>
-						</h5>
+						
 						<div class="action">
-							<button class="add-to-cart btn btn-default" type="button">add
-								to cart</button>
+							<button class="add-to-cart btn btn-default" type="submit" id="add">
+							판매상품 등록
+								</button>
 							<button class="like btn btn-default" type="button">
 								<span class="fa fa-heart"></span>
 							</button>
