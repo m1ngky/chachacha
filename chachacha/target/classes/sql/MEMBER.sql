@@ -19,3 +19,19 @@ CREATE TABLE FMEMBER(
    PRIMARY KEY(ID)
 );
 
+insert into fmember(id, password, name, email, grade) values ('admin', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a3', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a4', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a5', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a6', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a7', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a8', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a9', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a10', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a11', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a12', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a13', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a14', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a15', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a16', '1234', 'kim', 'kim@naver.com', '판매자');
+insert into fmember(id, password, name, email, grade) values ('a17', '1234', 'kim', 'kim@naver.com', '판매자');

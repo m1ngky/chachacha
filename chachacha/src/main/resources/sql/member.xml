@@ -22,4 +22,26 @@
  		insert  into fmember values(#{id},#{password},#{name},#{nickname},#{birth},#{gender},#{email},#{address},#{phonenumber},sysdate,0,#{account},'구매자')
  	</insert>
  	
+ 	
+ 	<select id="memberList" resultType="member">
+		select id, password, name, email, grade, joindate from fmember
+		order by joindate
+	</select>
+ 	
+ 	
+ 	<select id="search" resultType="member">
+		select * from fmember
+		where ${index} like '%'||#{search_word}||'%'
+	</select>
+	
+	
+	<select id="gradeList" resultType="member" parameterType="String">
+		select id, password, name, email, grade, joindate from fmember where grade = #{grade}
+		order by joindate
+	</select>
+	
+	<delete id="delete" parameterType="member">
+		delete from fmember where id = #{id}
+	</delete>
+ 	
  </mapper>

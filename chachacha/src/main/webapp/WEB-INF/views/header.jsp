@@ -28,7 +28,7 @@
 					</c:if>
 					
 					<c:if test="${id=='admin' }">
-                    <a href="member_list.net">회원 정보</a>
+                    <a href="admin.net">admin dashboard</a>
                     </c:if>
 					
 					<li><a href="productcommit.cha">상품등록</a></li>
