@@ -16,5 +16,7 @@ CREATE TABLE FMEMBER(
    mileage NUMBER(10),
    account VARCHAR(50),
    PRIMARY KEY(ID)
-);
+)
+
+
 

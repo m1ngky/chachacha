@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- 
+
 <mapper namespace="Products">
-<insert id ="addproduct" parameterType="product">
-insert into Product
-values(#{p_code},#{p_price},#{p_gprice},#{p_limit},#{p_name},#{p_sellername},#{p_count})
-</insert>
+	<insert id="addproduct" parameterType="product">
+		insert into product(P_CODE,P_PRICE,P_GPRICE,P_LIMIT,P_NAME,P_SELLERNAME,P_COUNT,P_DESCRIPTION,P_ORIGINALFILE,P_SAVEFILE)
+		values(#{p_code},#{p_price},#{p_gprice},#{p_limit},#{p_name},#{p_sellername},#{p_count},#{p_description},#{p_orignalfile},#{p_savefile})
+	</insert>
+
+
+	<select id="productlist" resultType="product">
+		select * from product
+	</select>
 
 </mapper>

@@ -1,5 +1,7 @@
 package c.h.a.domain;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Products {
 	private String p_code;
 	private int p_price;
@@ -8,6 +10,37 @@ public class Products {
 	private int p_count;
 	private String p_name;
 	private String p_sellername;
+	private String p_description;
+	private MultipartFile p_uploadfile;
+	private String p_savefile="/image/default.png";
+	private String p_originalfile ="/image/default.png";
+	
+	
+
+	public MultipartFile getP_uploadfile() {
+		return p_uploadfile;
+	}
+	public void setP_uploadfile(MultipartFile p_uploadfile) {
+		this.p_uploadfile = p_uploadfile;
+	}
+	public String getP_savefile() {
+		return p_savefile;
+	}
+	public void setP_savefile(String p_savefile) {
+		this.p_savefile = p_savefile;
+	}
+	public String getP_originalfile() {
+		return p_originalfile;
+	}
+	public void setP_originalfile(String p_originalfile) {
+		this.p_originalfile = p_originalfile;
+	}
+	public String getP_description() {
+		return p_description;
+	}
+	public void setP_description(String p_description) {
+		this.p_description = p_description;
+	}
 	public String getP_code() {
 		return p_code;
 	}
