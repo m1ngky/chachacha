@@ -18,6 +18,7 @@
 
 			<nav id="menu">
 				<ul id="menu-nav">
+
 					<li class="current"><a href="#home-slider">Home</a></li>
 					
 					<c:if test="${!empty id}">
@@ -33,6 +34,7 @@
                     </c:if>
 					
 					<li><a href="productcommit.cha">상품등록</a></li>
+					<li><a href="productlist.cha">판매상품목록</a></li>
 					<li><a href="BoardList.bo">게시판</a></li>					
 					<li><a href="#contact">Contact</a></li>
 					<li><a href="shortcodes.html" class="external">Shortcodes</a></li>

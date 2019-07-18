@@ -102,15 +102,18 @@
 						<input class="input100" type="text" name="address" placeholder="">
 						<span class="focus-input100"></span>
 					</div>
+
 					
 					<div class="wrap-input100 validate-input" data-validate = "Date of Birth is required">
 					<span class="label-input100">Date of Birth</span><br><br>
 					<input type="date" id="birthdate" name="birthdate" class="form-control"><br>
 					<input id="birth" class="input100" type="text" name="birth" placeholder="..." readonly>
 					<span class="focus-input100"></span>
+
 					</div>
 					
 					<div class="wrap-input100 validate-input">
+
 						<span class="label-input100">Gender</span><br><br>
 						  <label class="gender"> 
                               <input type="radio" name="gender" value="male" checked>
@@ -137,6 +140,7 @@
                         </select>
 						<input id="account" class="input100" type="text" name="account" placeholder="12345-67-890123">
 						<span class="focus-input100"></span>
+
 					</div>
 
 					<div class="flex-m w-full p-b-33">
