@@ -15,69 +15,63 @@ public class BoardDAO {
 	
 	@Autowired
 	private SqlSessionTemplate sqlSession;
+ 
+	
 
-	public int getListCount() {
-		
-		return sqlSession.selectOne("Boards.count");
+	public int getServiceListCount(String category) { 
+		return sqlSession.selectOne("Boards.getServiceListCount", category);
 	}
+
+
 
 	public List<Board> getBoardList(HashMap<String, Integer> map) {
 		
-		return sqlSession.selectList("Boards.boardList", map);
+		return sqlSession.selectList("Boards.boardlist", map);
 	}
 
-	public int insertBoard(Board board) {
-		
-		return sqlSession.insert("Boards.insert", board);
-		
+
+
+	public List<Board> getServiceBoardList(Map<String, Object> map) {
+		return sqlSession.selectList("Boards.getServiceboardList",map);
 	}
 
-	public Board getDetail(int num) {
-		
-		return sqlSession.selectOne("Boards.detail", num);
-	}
 
-	public int boardModify(Board modifyboard) {
-		
-		return sqlSession.update("Boards.modify", modifyboard);
-	}
+
 
 	public void setReadCountUpdate(int num) {
 		
-		sqlSession.selectOne("Boards.ReadCountUpdate", num);
+		sqlSession.selectOne("Boards.readcountupdate", num);
 		
 	}
 
-	public int boardModifyAction(int num) {
-		
-		return sqlSession.update("Boards.modify", num);
+
+
+
+	public int Boardinsert(Board board) {
+		return sqlSession.insert("Boards.insert", board);
 	}
+
 
 	public Board isBoardWriter(Map<String, Object> map) {
 		
-		return sqlSession.selectOne("Boards.BoardWriter", map);
+		return sqlSession.selectOne("Boards.boardwriter", map);
 	}
 
 	public int boardDelete(int num) {
 		
-		return sqlSession.delete("Boards.BoardDelete", num);
+		return sqlSession.delete("Boards.boarddelete", num);
 	}
 
 	public int boardReply(Board board) {
 		
-		return sqlSession.insert("Boards.Reply", board);
+		return sqlSession.insert("Boards.reply", board);
 	}
 
 	public void boardReplyUpdate(Board board) {
 		
-		sqlSession.update("Boards.ReplyUpdate", board);
+		sqlSession.update("Boards.replyupdate", board);
 		
 	}
 
-	public void boardDeleteall(int num) {
-		
-		sqlSession.delete("Boards.deleteall", num);
-		
-	}
 
 }

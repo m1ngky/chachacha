@@ -3,107 +3,128 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
 <mapper namespace="Boards">
+
 	<select id="count" resultType="int">
-		select count(*) from board
+		select count(*) from fboard
 	</select>
+
+
+	<select id="getServiceListCount" resultType="int" parameterType="String">
+		select count(*) from fboard where category = #{category}
+	</select> 
+
 	
-	<select id="boardList" parameterType="Map" resultType="board">
+
+	<select id="getServiceboardList" parameterType="Map" resultType="board">
+
+	<select id="boardlist" parameterType="map" resultType="board">
+
 		select * from( select rownum rnum, b.*
 		from(select *
-		from board
-		order by BOARD_RE_REF desc,
-		BOARD_RE_SEQ asc) b
+		from fboard
+		order by num desc) b
 		)
 		where rnum &gt;=#{startrow} and rnum &lt;=#{endrow}
 	</select>
 	
 	<insert id="insert" parameterType="board">
-		<selectKey resultType="int" order="BEFORE" keyColumn="BOARD_NUM" keyProperty="BOARD_NUM">
-			select nvl(max(BOARD_NUM),0)+1 from board
+		<selectKey resultType="int" order="BEFORE" keyColumn="num" keyProperty="num">
+			select nvl(max(num),0)+1 from fboard
 		</selectKey>
 		
-		insert into board
-		(BOARD_NUM,
-		 BOARD_NAME, BOARD_PASS, BOARD_SUBJECT,
-		 BOARD_CONTENT, BOARD_FILE, BOARD_ORIGINAL,
-		 BOARD_RE_REF,
-		 BOARD_RE_LEV, BOARD_RE_SEQ, BOARD_READCOUNT,
-		 BOARD_DATE
+		insert into fboard
+		(num,
+		 id, password, subject,
+		 content, filename, originalfile,
+		 readcount,
+		 inputdate
 		) values
-		(#{BOARD_NUM},
-		 #{BOARD_NAME}, #{BOARD_PASS}, #{BOARD_SUBJECT},
-		 #{BOARD_CONTENT}, #{BOARD_FILE, jdbcType=VARCHAR}, #{BOARD_ORIGINAL, jdbcType=VARCHAR},
-		 #{BOARD_NUM},
-		 #{BOARD_RE_LEV}, #{BOARD_RE_SEQ}, #{BOARD_READCOUNT},
+		(#{num},
+		 #{id}, #{password}, #{subject},
+		 #{content}, #{filename, jdbcType=VARCHAR}, #{originalfile, jdbcType=VARCHAR},
+		 #{readcount},
 		 sysdate
 		)
 		
 	</insert>
 	
 	<select id="detail" parameterType="int" resultType="board">
-		select * from board where BOARD_NUM = #{number}
+		select * from fboard where num = #{number}
 	</select>
 	
-	<update id="ReadCountUpdate" parameterType="int">
-		update board 
-		set BOARD_READCOUNT = 
-		BOARD_READCOUNT+1 where BOARD_NUM = #{number}
+	<update id="readcountupdate" parameterType="int">
+		update fboard 
+		set readcount = 
+		readcount+1 where num = #{number}
 	</update>
 	
-	<select id="BoardWriter" parameterType="map" resultType="board">
-		select * from board where BOARD_NUM = #{num} and BOARD_PASS = #{pass}
+	<select id="boardwriter" parameterType="map" resultType="board">
+		select * from fboard where num = #{num} and password = #{password}
 	</select>
 	
 	<update id="modify" parameterType="board">
-		update board
+		update fboard
 		set
-		BOARD_SUBJECT=#{BOARD_SUBJECT},
-		BOARD_CONTENT=#{BOARD_CONTENT},
-		BOARD_FILE=#{BOARD_FILE, jdbcType=VARCHAR},
-		BOARD_ORIGINAL=#{BOARD_ORIGINAL, jdbcType=VARCHAR}
-		where BOARD_NUM=#{BOARD_NUM}
+		subject=#{subject},
+		content=#{content},
+		filename=#{filename, jdbcType=VARCHAR},
+		originalfile=#{originalfile, jdbcType=VARCHAR}
+		where num=#{num}
 	</update>
 	
-	<delete id="BoardDelete" parameterType="int" >
-		delete from board where BOARD_NUM = #{BOARD_NUM}
+	<delete id="boarddelete" parameterType="int" >
+		delete from fboard where num = #{num}
 	</delete>
 	
-	<insert id="Reply" parameterType="board">
-		<selectKey resultType="int" order="BEFORE" keyColumn="BOARD_NUM" keyProperty="BOARD_NUM">
-			select nvl(max(BOARD_NUM),0)+1 from board
+	<insert id="reply" parameterType="board">
+		<selectKey resultType="int" order="BEFORE" keyColumn="num" keyProperty="num">
+			select nvl(max(num),0)+1 from fboard
 		</selectKey>
 		
-		insert into board
-		(BOARD_NUM,
-		 BOARD_NAME, BOARD_PASS, BOARD_SUBJECT,
-		 BOARD_CONTENT,
-		 BOARD_RE_REF,
-		 BOARD_RE_LEV, BOARD_RE_SEQ, BOARD_READCOUNT,
-		 BOARD_DATE
+		insert into fboard
+		(num,
+		 id, password, subject,
+		 content,
+		 readcount
+		 inputdate
 		) values
-		(#{BOARD_NUM},
-		 #{BOARD_NAME}, #{BOARD_PASS}, #{BOARD_SUBJECT},
-		 #{BOARD_CONTENT},
-		 #{BOARD_RE_REF},
-		 #{BOARD_RE_LEV}+1, #{BOARD_RE_SEQ}+1, #{BOARD_READCOUNT},
+		(#{num},
+		 #{id}, #{password}, #{subject},
+		 #{content},
+		 #{readcount},
 		 sysdate
 		)
 		
 	</insert>
 	
-	<update id="ReplyUpdate" parameterType="board">
-		<![CDATA[
-		update board set BOARD_RE_SEQ = BOARD_RE_SEQ +1
-		where BOARD_RE_REF = #{BOARD_RE_REF} and BOARD_RE_SEQ > #{BOARD_RE_SEQ}
-		]]>
-	</update>
-	
 	<delete id="delete" parameterType="int">
-		delete from board where BOARD_NUM=#{number}
+		delete from fboard where num=#{number}
 	</delete>
 	
-	<delete id="deleteall" parameterType="int">
-		delete from board where BOARD_RE_REF=#{number}
-	</delete>
+									 from(select * 
+									      from fboard 
+									      where category=#{category}) b
+									      )  
+									 where rnum &gt;=#{startrow} and rnum &lt;=#{endrow}
+	</select>
 	
+	<insert id="insert" parameterType="board">
+		<selectKey resultType="int" order="BEFORE"
+					keyColumn="num"  keyProperty="num">
+			select nvl(max(num),0)+1 from fboard
+		</selectKey>
+		insert into board
+		(NUM,
+		 NAME, category,ccategory,readcount,SUBJECT,
+		 CONTENT, filename,file_original,
+		 inputdate) 
+		 values(
+		 #{NUM},#{NAME}, #{category},#{ccategory},#{readcount}, #{SUBJECT},
+		 #{CONTENT}, #{filename, jdbcType=VARCHAR}, 
+		#{file_original, jdbcType=VARCHAR},
+		 sysdate)
+	
+	</insert>
+	
+
 </mapper>

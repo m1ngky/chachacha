@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Carts">
+	<!--  1. 장바구니 추가 -->
+	<insert id="addCart">
+		insert into cart (c_no, c_id,p_code,c_amount)
+		values (seq_cart.nextval, #{c_id}, #{p_code},  #{c_amount})
+	</insert>
+	
+	<!--  2. 장바구니 목록 -->
+	<select id="listCart" resultType="cart">
+		select
+			p.p_image,
+			c.c_no,	
+			c.c_id,
+			p.p_code,
+			p.p_name,
+			c.c_amount,
+			p.p_gprice,
+			p.p_category,
+			(p_gprice * c_amount) money
+		from
+			member m, product p, cart c
+		where m.id = c.c_id
+			and p.p_code = c.p_code
+			and c.c_id = #{userid}
+		order by
+			c.c_no	<!-- 음.. 나중에는 날짜순으로 정렬을 해보자 -->
+	</select>
+	
+	<!--  3. 장바구니 전체 금액 -->
+	<select id="sumMoney" resultType="int">
+		select NVL(SUM(p_gprice * c_amount), 0) money
+		from cart c, product p
+		where c.p_code = p.p_code and c.c_id = #{c_id}
+	</select>
+	
+	<!--  4. 장바구니 삭제 -->
+	<delete id="delete">
+		delete from cart
+		where c_no = #{cartId}
+	</delete>
+	
+	<!--  5. 장바구니 수정 -->
+	<update id="modifyCart">
+		update cart
+		set c_amount = #{c_amount}
+		where c_id = #{c_id}
+		and p_code = #{p_code}
+	</update>
+	
+	<!--  6. 장바구니에 동일한 상품이 있는지 확인 -->
+	<select id="countCart" resultType="int">
+		select count(*)
+		from cart
+		where c_id = #{userId}
+		and p_code = #{productId}
+	</select>
+	
+	<!--  7. 장바구니에 동일 상품있으면 수정-->
+	<update id="updateCart">
+		update cart
+		set c_amount = c_amount + #{c_amount}
+		where c_id = #{c_id}
+		and p_code = #{p_code}
+	</update>
+
+</mapper>

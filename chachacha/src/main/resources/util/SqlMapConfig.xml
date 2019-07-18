@@ -6,7 +6,13 @@
 	<typeAliases>
 
 		<typeAlias alias="member" type="c.h.a.domain.Member"/>
+
+
 		<typeAlias alias="product" type="c.h.a.domain.Products"/>
+		
+		
+
+
 		<typeAlias alias="board" type="c.h.a.domain.Board"/>
 
 	 </typeAliases>
